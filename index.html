@@ -1,1 +1,773 @@
-shaohauxi
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>微笑</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/smile.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/idangerous.swiper.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery-app.css">
+		<link rel="stylesheet" href="css/article.css" media="all">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/idangerous.swiper-2.0.min.js"></script> 
+		<script src="js/nativeShare.js"></script>
+		<script src="js/gallery-app.js"></script> 
+    <link rel="stylesheet" href="css/nativeShare.css"/>
+	</head>
+	<body style="background-color: #F8F8F8;">
+		<div id="upper">
+			<div id="topyellow"></div>
+			<div id="logopart">
+					<a class="logo" href="http://www.smile-time.cn/"><img src="img/logo1.png" height="55" width="130" alt="" /></a>
+					<div><span style="margin-left:auto;margin-right:auto; font-size:24px;">微笑时刻</span></div>
+			</div>
+			<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+			<div id="navpart">
+				<a style="font-family:'华文软黑';font-size: 130%;">首页</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文软黑';font-size: 130%;">品牌</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文软黑';font-size: 130%;">服务流程</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文软黑';font-size: 130%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">图片欣赏</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文软黑';font-size: 130%;">店铺信息</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文软黑';font-size: 130%;">联系我们</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<img src="img/phone.png" height="30" width="30" alt="">&nbsp&nbsp<span>010-59436010<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<span style="border-style: solid;border-color: #f6ca38;padding:6px; width:100px; height:30px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:15px;">&nbsp&nbsp<span style="color:#f6ca38;" data-toggle="modal" data-target="#globalMsgModal">马上预约</span>&nbsp&nbsp</span>&nbsp&nbsp
+				<span style="border-style: solid;border-color: #f6ca38;padding:6px; width:100px; height:30px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:15px;background-color: #f6ca38">&nbsp&nbsp<span style="color:#FFFFFF;">在线咨询</span>&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp
+				<span>English</span>
+			</div>
+			<div id="navimg" style="height:400px; width:100%;"><img src="img/header.png" style="width:100%" alt=""></div>
+		</div>
+		<script language =javascript >
+			var curIndex=0;
+			//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+			var timeInterval=6000;
+			var numpage = 6;
+			var arr=new Array();
+			arr[0]="img/zhengjianzhao.jpg";
+			arr[1]="img/xingxiangzhao.jpg";
+			arr[2]="img/touxiangzhao.jpg";
+			arr[3]="img/quanjiazhao.jpg";
+			arr[4]="img/jiehunzhao.jpg";
+			arr[5]="img/yishuzhao.jpg";
+			var textarr=new Array();
+			textarr[0]="最美证件照";
+			textarr[1]="文艺形象照";
+			textarr[2]="社交头像照";
+			textarr[3]="温馨全家照";
+			textarr[4]="幸福结婚照";
+			textarr[5]="唯美艺术照";
+			setInterval(changeImg,timeInterval);
+			function changeImg()
+			{
+				document.getElementById("obj1").src=arr[curIndex%numpage];
+				document.getElementById("text1").innerHTML=textarr[curIndex%numpage];
+				document.getElementById("obj2").src=arr[(curIndex+1)%numpage];
+				document.getElementById("text2").innerHTML=textarr[(curIndex+1)%numpage];
+				document.getElementById("obj3").src=arr[(curIndex+2)%numpage];
+				document.getElementById("text3").innerHTML=textarr[(curIndex+2)%numpage];
+				document.getElementById("obj4").src=arr[(curIndex+3)%numpage];
+				document.getElementById("text4").innerHTML=textarr[(curIndex+3)%numpage];
+				if (curIndex==0) 
+				{
+					curIndex=arr.length-1;
+				}
+				else
+				{
+					curIndex-=1;
+				}
+			}
+			function setnextImg(){
+				document.getElementById("obj1").src=arr[curIndex%numpage];
+				document.getElementById("text1").innerHTML=textarr[curIndex%numpage];
+				document.getElementById("obj2").src=arr[(curIndex+1)%numpage];
+				document.getElementById("text2").innerHTML=textarr[(curIndex+1)%numpage];
+				document.getElementById("obj3").src=arr[(curIndex+2)%numpage];
+				document.getElementById("text3").innerHTML=textarr[(curIndex+2)%numpage];
+				document.getElementById("obj4").src=arr[(curIndex+3)%numpage];
+				document.getElementById("text4").innerHTML=textarr[(curIndex+3)%numpage];
+				if (curIndex==0) 
+				{
+					curIndex=arr.length-1;
+				}
+				else
+				{
+					curIndex-=1;
+				}
+			}
+			function setpreviousImg(){
+			curIndex = (curIndex+2)%numpage;
+				document.getElementById("obj1").src=arr[curIndex%numpage];
+				document.getElementById("text1").innerHTML=textarr[curIndex%numpage];
+				document.getElementById("obj2").src=arr[(curIndex+1)%numpage];
+				document.getElementById("text2").innerHTML=textarr[(curIndex+1)%numpage];
+				document.getElementById("obj3").src=arr[(curIndex+2)%numpage];
+				document.getElementById("text3").innerHTML=textarr[(curIndex+2)%numpage];
+				document.getElementById("obj4").src=arr[(curIndex+3)%numpage];
+				document.getElementById("text4").innerHTML=textarr[(curIndex+3)%numpage];
+				
+				if (curIndex==0) 
+				{
+					curIndex=arr.length-1;
+				}
+				else
+				{
+					curIndex-=1;
+				}
+			}
+		</script>
+		<div id="part1" class="row" style="padding:56px 0px 32px 0px;">
+			  <div class="col-md-1" ></div>
+			  <div class="col-md-1" style="width:5%;">
+				<div style="padding:12px 0px 12px 0px;" align=center>
+					<img href="#"  src="img/previous.png" onclick="setpreviousImg()" height="30" width="18" alt="" style="margin-top:90%;">
+				</div>
+			  </div>
+			  <div class="col-md-2" >
+				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
+					<img id="obj1" src="img/zhengjianzhao.jpg" height="257" width="180" alt=""></br>
+					<div id="text1" style="margin-top:6px;">最美证件照</div>
+				</div>
+				
+			  </div>
+			  <div class="col-md-2" >
+				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
+					<img id="obj2" src="img/xingxiangzhao.jpg" height="257" width="180" alt="">
+					<div id="text2" style="margin-top:6px;">文艺形象照</div>
+				</div>
+			  </div>
+			  <div class="col-md-2" >
+				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
+					<img id="obj3" src="img/touxiangzhao.jpg" height="257" width="180" alt="">
+					<div id="text3" style="margin-top:6px;">社交头像照</div>
+				</div>
+			  </div>
+			  <div class="col-md-2" >
+				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
+					<img id="obj4" src="img/quanjiazhao.jpg" height="257" width="180" alt="">
+					<div id="text4" style="margin-top:6px;">温馨全家照</div>
+				</div>
+				
+			  </div>
+			  <div class="col-md-1"  style="width:5%;">
+				<div style="height:307px;padding:12px 0px 12px 0px;vertical-align:middle;" align=center>
+					<img href="#"  src="img/next.png" onclick="setnextImg()" height="30" width="18" alt="" style="margin-top:90%;">
+				</div>
+			  </div>
+			  <div class="col-md-1" ></div>
+		</div>
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		
+		<script language =javascript>
+			function mouseover1(){
+				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+			}
+			function mouseout1(){
+				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+			}
+			function mouseover2(){
+				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+			}
+			function mouseout2(){
+				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+			}
+			function mouseover3(){
+				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+			}
+			function mouseout3(){
+				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+			}
+			function mouseover5(){
+				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+			}
+			function mouseout5(){
+				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+			}
+			function mouseover4(){
+				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe1.svg' type='image/svg+xml' style='margin-top:00px;'/>";
+			}
+			function mouseout4(){
+				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe.svg' type='image/svg+xml' style='margin-top:20px;'/>";
+			}
+			function mouseover6(){
+				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+			}
+			function mouseout6(){
+				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+			}
+		</script>
+		
+		<div id="part2">
+			<div class="col-md-2" ></div>
+			<div class="col-md-8" align="center">
+				<p style="font-family:'华文软黑';font-size: 24px;margin-top:30px;margin-bottom:20px;">服务流程
+				<p style="font-family:'华文软黑';font-size: 16px;margin-bottom:16px;">微笑时刻，致力于最美证件照、形象照。以最专业的服务为顾客提供最舒适的拍照体验。
+				<div class=row>
+					<div class="col-md-2" align="center" style="height:360px;"  onmouseover="mouseover1()" onmouseout="mouseout1()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd1" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
+							<embed id ="svg1" src="svg/weixin.svg" type="image/svg+xml" style="margin-bottom:0px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">预约
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">关注微笑时刻公众号进行自主预约，根据您自己的时间选择店铺和时间进行预约。
+						</div>
+					</div>
+					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover2()" onmouseout="mouseout2()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd2" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
+							<embed src="svg/daodian.svg" type="image/svg+xml" style="margin-top:20px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">到店
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">根据您手机预定的时间准时到您预约的店铺，我们会有专业的服务人员为您服务。
+						</div>
+					</div>
+					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover3()" onmouseout="mouseout3()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd3" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
+							<embed src="svg/zaoxing.svg" type="image/svg+xml" style="margin-top:20px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">造型
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">专业化妆师会根据您的照片用途、职业属性、五官特点等量身定制拍摄妆容和服装搭配。
+						</div>
+					</div>
+					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover4()" onmouseout="mouseout4()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd4" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;" onmouseover="mouseover4()" onmouseout="mouseout4()">
+							<embed src="svg/paishe.svg" type="image/svg+xml" style="margin-top:20px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">拍照
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">专业摄影师会调整您的身体姿态和面部神态，提升面部仪表形象，达到最佳拍摄效果。
+						</div>
+					</div>
+					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover5()" onmouseout="mouseout5()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd5" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
+							<embed src="svg/houqi.svg" type="image/svg+xml" style="margin-top:20px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0; height:203px;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">后期
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">资深修图师会对照片进行2专业较色，并根据照片用途和个性化进行精修美化。
+						</div>
+					</div>
+					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover6()" onmouseout="mouseout6()">
+						<p>R:255
+						<p>G:255
+						<p>B:255
+						<div id ="sgd6" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
+							<embed src="svg/quzhao.svg" type="image/svg+xml" style="margin-top:20px;"/>	
+						</div>
+						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
+border-width:1px;border-color:#C0C0C0;height:203px;">
+							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">取照
+							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">照片经过高精度冲印和裁剪，装袋包装，用独具匠心，把精致呈现给您。
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-md-2" ></div>
+		</div>
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		
+		<script language =javascript >
+			var curIndex2=0;
+			//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+			var timeInterval2=6000;
+			var numpage2 = 6;
+			var arr2=new Array();
+			arr2[0]="img/xingxiang1.jpg";
+			arr2[1]="img/xingxiang2.jpg";
+			arr2[2]="img/xingxiang3.jpg";
+			arr2[3]="img/xingxiang4.jpg";
+			arr2[4]="img/xingxiang5.jpg";
+			arr2[5]="img/xingxiang6.jpg";
+			setInterval(changeImg2,timeInterval2);
+			function changeImg2()
+			{
+				document.getElementById("intro"+((curIndex2+1)%numpage2+1)).style.color="#f6ca38";
+				document.getElementById("intro"+((curIndex2+2)%numpage2+1)).style.color="#000000";
+				document.getElementById("src1").src=arr2[curIndex2%numpage2];
+				document.getElementById("src2").src=arr2[(curIndex2+1)%numpage2];
+				document.getElementById("src3").src=arr2[(curIndex2+2)%numpage2];
+				if (curIndex2==0) 
+				{
+					curIndex2=arr2.length-1;
+				}
+				else
+				{
+					curIndex2-=1;
+				}
+			}
+			function setnextImg2(){
+				changeImg2();
+			}
+			function setpreviousImg2(){
+				curIndex2=(curIndex2+2)%numpage2;
+				document.getElementById("src1").src=arr2[curIndex2%numpage2];
+				document.getElementById("src2").src=arr2[(curIndex2+1)%numpage2];
+				document.getElementById("src3").src=arr2[(curIndex2+2)%numpage2];
+				if (curIndex2==0) 
+				{
+					curIndex2=arr2.length-1;
+				}
+				else
+				{
+					curIndex2-=1;
+				}
+			}
+		</script>
+		
+		<div id="part3" class="row" style="padding:46px 0px 16px 0px;">
+			  <div class="col-md-1" ></div>
+			  <div class="col-md-1"  style="height:568px;">
+				<div style="height:568px;padding:12px 0px 12px 0px;" align=center>
+					<img  src="img/previous.png" onclick="setpreviousImg2()" height="30" width="18" alt="" style="margin-top:210px;">
+				</div>
+			  </div>
+			  <div class="col-md-8" >
+				<div>
+					<img id="src1" class="gray" src="img/xingxiang1.jpg" height="432" width="280" alt="" >
+					<img id="src2" src="img/xingxiang2.jpg" height="472" width="300" alt="" >
+					<img id="src3" class="gray" src="img/xingxiang3.jpg" height="432" width="280" alt="" >
+				</div>
+				<div align=center style="margin-top:15px">
+					<table style="table-layout:fixed;width:800px;">
+						<tr>
+							<td id="intro1"><p  style="font-family:'华文软黑';font-size: 70%;">ID Photo</p><p>证件照</p><hr style="width:100%;background-color: black; height: 1px"></td>
+							<td id="intro2" style="color:#f6ca38"><p style="font-family:'华文软黑';font-size: 70%;">Image Photo</p><p>形象照</p><hr style="width:100%;background-color: black; height: 1px"></td>
+							<td id="intro3"><p style="font-family:'华文软黑';font-size: 70%;">Team Photo</p><p>团队照</p><hr style="width:100%;background-color: black; height: 1px"></td>
+							<td id="intro4"><p style="font-family:'华文软黑';font-size: 70%;">Marry Photo&nbsp&nbsp</p><p>结婚照&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro5"><p style="font-family:'华文软黑';font-size: 10px;">Sociality Photo&nbsp&nbsp</p><p>社交头像&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro6"><p id="text6" style="font-family:'华文软黑';font-size: 70%;">Family Photo</p><p>全家福</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro7"><p id="text7" style="font-family:'华文软黑';font-size: 70%;">More</p><p>更多</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+						</tr>
+					</table>
+				</div>
+			  </div>
+			  <div class="col-md-1"  style="height:568px;">
+				<div style="height:568px;padding:12px 0px 12px 0px;" onclick="setnextImg2()" align=center>
+					<img  src="img/next.png" height="30" width="18" alt="" style="margin-top:210px;">
+				</div>
+			  </div>
+			  <div class="col-md-1" ></div>
+			
+		</div>
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		
+		<script type="text/javascript">
+		var end=1;
+		function mouseOver1(obj)
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
+			if(end==1){
+			document.getElementById("s1").style.width="350px";
+			document.getElementById("s1").style.padding="0";
+			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>国贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
+			}
+		}
+		function mouseOut1(obj)
+		{
+			end=0;
+			document.getElementById("s1").style.width="300px";
+			document.getElementById("s1").style.padding="10px 0 0 10px";
+			obj.innerHTML="<span >国贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s1").style.width="300px";
+			document.getElementById("s1").style.padding="10px 0 0 10px";
+			end=1;
+		}
+		
+		function mouseOver2(obj)
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
+			if(end==1){
+			document.getElementById("s2").style.width="350px";
+			document.getElementById("s2").style.padding="0";
+			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>四道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
+			}
+			
+		}
+		function mouseOut2(obj)
+		{
+		end =0;
+			document.getElementById("s2").style.width="300px";
+			document.getElementById("s2").style.padding="10px 0 0 10px";
+			obj.innerHTML="<span >四道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s2").style.width="300px";
+			document.getElementById("s2").style.padding="10px 0 0 10px";
+			end =1;
+		}
+		
+		function mouseOver3(obj)
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
+			if(end==1){
+			document.getElementById("s3").style.width="350px";
+			document.getElementById("s3").style.padding="0";
+			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>五道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
+			}
+			
+		}
+		function mouseOut3(obj)
+		{
+		end =0;
+			document.getElementById("s3").style.width="300px";
+			document.getElementById("s3").style.padding="10px 0 0 10px";
+			obj.innerHTML="<span >五道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s2").style.width="300px";
+			document.getElementById("s2").style.padding="10px 0 0 10px";
+			end =1;
+		}
+		function mouseOver4(obj)
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
+			if(end==1){
+			document.getElementById("s4").style.width="350px";
+			document.getElementById("s4").style.padding="0";
+			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>魏公村店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
+			}
+		}
+		function mouseOut4(obj)
+		{
+		end =0;
+			document.getElementById("s4").style.width="300px";
+			document.getElementById("s4").style.padding="10px 0 0 10px";
+			obj.innerHTML="<span >魏公村店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s4").style.width="300px";
+			document.getElementById("s4").style.padding="10px 0 0 10px";
+			end =1;
+		}
+		
+		function mouseOver5(obj)
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
+			if(end==1){
+			document.getElementById("s5").style.width="350px";
+			document.getElementById("s5").style.padding="0";
+			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>外经贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
+			}
+		}
+		function mouseOut5(obj)
+		{
+		end =0;
+			document.getElementById("s5").style.width="300px";
+			document.getElementById("s5").style.padding="10px 0 0 10px";
+			obj.innerHTML="<span>外经贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s5").style.width="300px";
+			document.getElementById("s5").style.padding="10px 0 0 10px";
+			end =1;
+		}
+		</script>
+		
+		<div id="part4" class="row" style="padding:26px 0px 16px 0px;">
+			  <div class="col-md-2" ></div>
+			  <div class="col-md-4" >
+				<div style="width:300px;background-color:#FFFFFF;height:104px;padding:30px 0px 0px 20px;border-style:solid;
+border-width:2px;border-color:#C0C0C0;border-bottom-style:none;"><span >北京</span></div>
+				<div id="s1" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
+border-width:2px;border-color:#C0C0C0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver1(this)" onmouseout="mouseOut1(this)"><span >国贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div id="s2" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
+border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver2(this)" onmouseout="mouseOut2(this)"><span>四道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div id="s3" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
+border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver3(this)" onmouseout="mouseOut3(this)"><span>五道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div id="s4" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
+border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver4(this)" onmouseout="mouseOut4(this)"><span>魏公村店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div id="s5" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
+border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver5(this)" onmouseout="mouseOut5(this)"><span>外经贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div style="width:300px;background-color:#FFFFFF;height:106px;border-style:solid;
+border-width:2px;border-color:#D0D0D0;"></div>
+			  </div>
+			  <div class="col-md-4" style="padding:40px 100px 20px 60px;background-color:#FFFFFF;border-style:solid;
+border-width:2px;border-color:#D0D0D0;">
+				<div id="content">
+					<p>五道口店</p>
+					<p>Add:海淀区五道口华清商务会馆601室
+					<p>Tel: 010-59436010
+					<p>途经公交：307路;331路;375路;429路;508路;</br>
+					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
+					<p>地铁：13号线B出口直走500米即到
+					<img src="img/ditu1.png" height="214" width="270" alt="" ></img>
+				</div>
+			  </div>
+			  <div class="col-md-2" ></div>
+			
+		</div>
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px;display:none;">
+		<div id="footer" class="row" style="background-color:#FFCC33;">
+			<div class="col-md-2" ></div>
+			<div class="col-md-8" align="center">
+				<p style="font-size:40px;" align="center">Say Hello
+				<p style="font-size:16px;" align="center">匠人精神，用照片致敬“匠人精神”。方寸之间，见真功夫。在通往极致的路上，我们从没有懈怠。
+				<form action="#" method="get">
+					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
+						<input type="text" name="email" style="height:42px;margin-right:4%;width:36%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    email"/>
+						<input type="text" style="height:42px;width:36%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    profession"/>
+					</div>
+					<div style="width:90%">
+						<input type="text" style="height:42px;width:77%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    Message"/></br>
+					</div>
+					<div style="width:90%">
+						<input type="submit" style="height:42px;width:77%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;margin-top:26px;" value="send message"/>
+					</div>
+					
+					<div style="width:90%">
+						<!-- <ul>
+				<li class="sian"><a href="javascript:void(0)" onclick="jumpUrl('tsina')" title="分享到新浪微博"></a></li>
+				<li class="qq"><a href="javascript:void(0)" onclick="jumpUrl('qq')" title="分享给QQ好友"></a></li>
+				<li class="wx" id="wx_reader"><a href="javascript:void(0)" title="分享给微信好友"></a>
+					<div class="pr-code-con" style="display: none;">
+						<div class="pr-code-pic"><img src="http://img.mp.sohu.com/qrcode/20161129/n474394660.jpg" width="116" height="116" alt="图片说明"></div>
+						<p>微信扫一扫<br>分享至朋友圈</p>
+					</div>
+				</li>
+			</ul> -->
+						
+					</div>
+
+				</form>
+					<div id="nativeShare">
+						<div class="label">分享到</div>'+
+						'<div class="list clearfix">'+
+						'<span data-app="sinaWeibo" class="nativeShare weibo"><i></i>新浪微博</span>'+
+						'<span data-app="weixin" class="nativeShare weixin"><i></i>微信好友</span>'+
+						'<span data-app="weixinFriend" class="nativeShare weixin_timeline"><i></i>微信朋友圈</span>'+
+						'<span data-app="QQ" class="nativeShare qq"><i></i>QQ好友</span>'+
+						'<span data-app="QZone" class="nativeShare qzone"><i></i>QQ空间</span>'+
+						'<span data-app="" class="nativeShare more"><i></i>更多</span>'+
+						'</div>
+					</div>
+					<script>
+						var config = {
+							url:'http://blog.wangjunfeng.com',
+							title:'王俊锋的个人博客',
+							desc:'王俊锋的个人博客',
+							img:'http://www.wangjunfeng.com/img/face.jpg',
+							img_title:'王俊锋的个人博客',
+							from:'王俊锋的博客'
+						};
+						var share_obj = new nativeShare('nativeShare',config);
+					</script>
+			</div>
+			<div class="col-md-2" ></div>
+			<!-- <SCRIPT LANGUAGE="JavaScript">
+			function mailsome1(){
+			who=prompt("Enter recipient's email address: ","antispammer@earthling.net");
+			what=prompt("Enter the subject: ","none");
+			if (confirm("Are you sure you want to mail "+who+" with the subject of "+what+"?")==true){
+			parent.location.href='mailto:'+who+'?subject='+what+'';
+			  }
+			} 
+			</SCRIPT>
+			<a href='javascript:mailsome1()'>E-Mail Someone!</a>
+			<FORM>
+			<input type=button value="E-Mail Someone!" onClick="mailsome1()">
+			</FORM>
+
+			<a href="mailto:test@163.com;test1@163.com?CC=test@163.com&BCC=test@163.com&Subject=Hello&Body=你好">给我发邮件</a> -->
+		</div>
+		<div id="bottom" align="center">
+			<p>版权所有：微笑时刻    京ICP备140106629号 Copyright 2010-2016 www.smile-time.cn All Rights Reserved.
+		</div>
+	<!--分割线
+	
+-->
+	
+
+
+	
+		<div class="modal fade" id="globalMsgModal" tabindex="-1" role="dialog" aria-labelledby="globalMsgModalLabel">
+			<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:30%">请扫描下方二维码预约</h4>
+						</div>
+						<div class="modal-body">
+							<div class="alert alert-success" style="display:none">
+							</div>
+							<div class="alert alert-info" style="display:none">
+							</div>
+							<div class="alert alert-warning" style="display:none">
+							</div>
+							<div class="alert alert-danger" style="display:none">
+							</div>
+							<div align=center>
+							<img src="img/erweima.jpg" height="488" width="488" alt="" style="margin:20px 20px 20px 20px;";></img>
+							</div>
+						</div>
+						<!--div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">我知道了</button>
+						</div-->
+					</div>
+			</div>
+		</div>
+		
+		
+		<div class="modal fade" id="globalMsgModals" tabindex="-1" role="dialog" aria-labelledby="globalMsgModalLabel">
+			<div class="modal-dialog" role="document" style="width:1200px">
+				<div class="modal-content" style="width:1200px;background-color:#F8F8F8;">
+					<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:30%">图片欣赏</h4>
+					</div>
+					<div class="row" style="width:100%;background-color:#FFFFFF;margin-left:0px;height:32px;">
+						<div class="col-md-1"></div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>证件照
+						</div>
+						<div class="col-md-1" style="background-color:#F8F8F8;height:32px;padding-left:0px;padding-right:0px;">
+							<hr style="width:100%; *margin: 0;order: 0;color: red;background-color: red; height: 5px;margin:0;">
+							<p align="center">形象照
+						</div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>结婚照
+						</div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>团队照
+						</div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>艺术照
+						</div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>头像照
+						</div>
+						<div class="col-md-1" style="">
+							<hr style="width:100%; *margin: 0;order: 0;color: #FFFFFF;background-color: #FFFFFF; height: 5px;margin:0;">
+							<p>更多期待
+						</div>
+						<div class="col-md-4" style="">
+						</div>
+					</div>
+					<div style="height:500px;">
+						<div class="swiper-container" style="cursor: -webkit-grab;">
+							<div class="pagination" style="height:0;overflow:hidden;"></div>
+							  <div id= "sdsd" align=center class="swiper-wrapper" style=" transition: 0.3s; -webkit-transition: 0.3s; -webkit-transform: translate3d(-364px, 0px, 0px); width: 7280px; height: 500px;">
+								<div class="swiper-slide swiper-slide-visible" style="width:364px;">
+								  <div class="inner"> 
+									<img  src="img/gallery-2.jpg " style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg"  style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide swiper-slide-visible" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide swiper-slide-visible" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+								<div class="swiper-slide" style="width: 364px;">
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+						
+					<script>
+					function cla(){document.getElementById("sdsd").style.height = '600px';}
+					function clr(){$('#imgt').toggleClass('min');
+					$('#imgt').toggleClass('max');}
+					</script>
+					
+				</div> 
+			</div> 
+		</div>
+		
+		
+		
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="height:684px;width:1024px">
+			<div class="modal-content" style="height:684px;width:1024px">
+			  <img src="img/gallery-7.jpg" style="height:684px;width:1024px" alt="">
+			</div>
+		  </div>
+		</div>
+		
+		
+	
+  </body>
+</html>

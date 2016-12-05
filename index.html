@@ -16,30 +16,31 @@
 		<script src="js/idangerous.swiper-2.0.min.js"></script> 
 		<script src="js/nativeShare.js"></script>
 		<script src="js/gallery-app.js"></script> 
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GQIfBgSoxpM2YEXp8twKBn7Iq2tnM8WP"></script>
+		<link rel="stylesheet" href="css/jquery.zySlide.css">
     <link rel="stylesheet" href="css/nativeShare.css"/>
 	<link rel="shortcut icon" href="http://www.smile-time.cn/wp-content/themes/bootstrap/favicon.ico">
 	</head>
-	<body style="background-color: #F8F8F8;">
+	<body style="background-color: #FFFFFF;">
 		<div id="upper">
 			<div id="topyellow"></div>
 			<div id="logopart">
-					<a class="logo" href="http://www.smile-time.cn/"><img src="img/logo1.png" height="55" width="130" alt="" /></a>
-					<div><span style="margin-left:auto;margin-right:auto; font-size:24px;">微笑时刻</span></div>
+					<a class="logo" href="http://www.smile-time.cn/"><img src="img/LOGOq.jpg" height="75" width="130" alt="" /></a>
 			</div>
-			<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+			<hr style="width:100%; margin-top:0px;*margin: 0;order: 0;color: 	#E0E0E0;background-color: 	#E0E0E0; height: 1px">
 			<div id="navpart">
-				<a style="font-family:'华文软黑';font-size: 130%;">首页</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<a style="font-family:'华文软黑';font-size: 130%;">品牌</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<a style="font-family:'华文软黑';font-size: 130%;">服务流程</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<a style="font-family:'华文软黑';font-size: 130%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">图片欣赏</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<a style="font-family:'华文软黑';font-size: 130%;">店铺信息</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<a style="font-family:'华文软黑';font-size: 130%;">联系我们</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;" href="#logopart">首页</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;" href="#part1">品牌</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;" href="#part2">服务流程</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;"  href="#part3">图片欣赏</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;" href="#part4">店铺信息</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a style="font-family:'华文细黑';font-size: 110%;" href="#footer">联系我们</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 				<img src="img/phone.png" height="30" width="30" alt="">&nbsp&nbsp<span>010-59436010<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<span style="border-style: solid;border-color: #f6ca38;padding:6px; width:100px; height:30px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:15px;">&nbsp&nbsp<span style="color:#f6ca38;" data-toggle="modal" data-target="#globalMsgModal">马上预约</span>&nbsp&nbsp</span>&nbsp&nbsp
-				<span style="border-style: solid;border-color: #f6ca38;padding:6px; width:100px; height:30px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:15px;background-color: #f6ca38">&nbsp&nbsp<span style="color:#FFFFFF;">在线咨询</span>&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp
+				<span style="border-style: solid;border-color: #f6ca38;padding:6px; width:100px; height:30px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;border-width:1px;">&nbsp&nbsp<span style="color:#f6ca38;" data-toggle="modal" data-target="#globalMsgModal">马上预约</span>&nbsp&nbsp</span>&nbsp&nbsp
+				<span style="border-style: solid;border-color: #f6ca38;padding:4px; width:100px; height:28px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;background-color: #f6ca38">&nbsp&nbsp<span style="color:#FFFFFF;">在线咨询</span>&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp
 				<span>English</span>
 			</div>
-			<div id="navimg" style="height:400px; width:100%;"><img src="img/header.png" style="width:100%" alt=""></div>
+			<div id="navimg" style="height:400px; width:100%;"><img src="img/header.png" style="width:100%;height:400px;" alt=""></div>
 		</div>
 		<script language =javascript >
 			var curIndex=0;
@@ -60,7 +61,7 @@
 			textarr[3]="温馨全家照";
 			textarr[4]="幸福结婚照";
 			textarr[5]="唯美艺术照";
-			setInterval(changeImg,timeInterval);
+			//setInterval(changeImg,timeInterval);
 			function changeImg()
 			{
 				document.getElementById("obj1").src=arr[curIndex%numpage];
@@ -80,7 +81,7 @@
 					curIndex-=1;
 				}
 			}
-			function setnextImg(){
+			function setpreviousImg(){
 				document.getElementById("obj1").src=arr[curIndex%numpage];
 				document.getElementById("text1").innerHTML=textarr[curIndex%numpage];
 				document.getElementById("obj2").src=arr[(curIndex+1)%numpage];
@@ -98,7 +99,7 @@
 					curIndex-=1;
 				}
 			}
-			function setpreviousImg(){
+			function setnextImg(){
 			curIndex = (curIndex+2)%numpage;
 				document.getElementById("obj1").src=arr[curIndex%numpage];
 				document.getElementById("text1").innerHTML=textarr[curIndex%numpage];
@@ -121,173 +122,161 @@
 		</script>
 		<div id="part1" class="row" style="padding:56px 0px 32px 0px;">
 			  <div class="col-md-1" ></div>
-			  <div class="col-md-1" style="width:5%;">
-				<div style="padding:12px 0px 12px 0px;" align=center>
-					<img href="#"  src="img/previous.png" onclick="setpreviousImg()" height="30" width="18" alt="" style="margin-top:90%;">
+			  <div class="col-md-1" >
+				<div style="height:167px;padding:12px 0px 12px 0px;vertical-align:middle;margin-top:50px;width:100%;" onclick="setpreviousImg()" align=center>
+					<img href="#"  src="img/previous.png"  height="30" width="18" style="margin-top:50px;">
 				</div>
 			  </div>
 			  <div class="col-md-2" >
 				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
-					<img id="obj1" src="img/zhengjianzhao.jpg" height="257" width="180" alt=""></br>
-					<div id="text1" style="margin-top:6px;">最美证件照</div>
+					<img id="obj1" class="mydiv1" src="img/zhengjianzhao.jpg" height="257" width="180" alt=""></br>
+					<div id="text1" style="margin-top:6px;margin-left:14%;" align="left">最美证件照</div>
 				</div>
 				
 			  </div>
 			  <div class="col-md-2" >
 				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
-					<img id="obj2" src="img/xingxiangzhao.jpg" height="257" width="180" alt="">
-					<div id="text2" style="margin-top:6px;">文艺形象照</div>
+					<img id="obj2" class="mydiv1" src="img/xingxiangzhao.jpg" height="257" width="180" alt="">
+					<div id="text2" style="margin-top:6px;margin-left:14%;" align="left">文艺形象照</div>
 				</div>
 			  </div>
 			  <div class="col-md-2" >
 				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
-					<img id="obj3" src="img/touxiangzhao.jpg" height="257" width="180" alt="">
-					<div id="text3" style="margin-top:6px;">社交头像照</div>
+					<img id="obj3" class="mydiv1" src="img/touxiangzhao.jpg" height="257" width="180" alt="">
+					<div id="text3" style="margin-top:6px;margin-left:14%;" align="left">社交头像照</div>
 				</div>
 			  </div>
 			  <div class="col-md-2" >
 				<div style="background-color:#FFFFFF;padding:12px 0px 12px 0px;" align=center>
-					<img id="obj4" src="img/quanjiazhao.jpg" height="257" width="180" alt="">
-					<div id="text4" style="margin-top:6px;">温馨全家照</div>
+					<img id="obj4" class="mydiv1" src="img/quanjiazhao.jpg" height="257" width="180" alt="">
+					<div id="text4" style="margin-top:6px;margin-left:14%;" align="left">温馨全家照</div>
 				</div>
 				
 			  </div>
 			  <div class="col-md-1"  style="width:5%;">
-				<div style="height:307px;padding:12px 0px 12px 0px;vertical-align:middle;" align=center>
-					<img href="#"  src="img/next.png" onclick="setnextImg()" height="30" width="18" alt="" style="margin-top:90%;">
+				<div style="height:167px;padding:12px 0px 12px 0px;vertical-align:middle;margin-top:50px;width:100%" onclick="setnextImg()" align=center>
+					<img href="#"  src="img/next.png"  height="30" width="18" alt="" style="margin-top:90%;">
 				</div>
 			  </div>
 			  <div class="col-md-1" ></div>
 		</div>
-		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color:#E0E0E0;background-color:#E0E0E0; height: 1px">
 		
 		<script language =javascript>
 			function mouseover1(){
-				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+					$('#sgd1').addClass('mydiv');
+<!-- 				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin1.svg' type='image/svg+xml' style='margin-top:0px;'/>	"; -->
 			}
 			function mouseout1(){
-				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+					$('#sgd1').removeClass('mydiv');
+<!-- 				document.getElementById("sgd1").innerHTML="<embed id ='svg1' src='svg/weixin.svg' type='image/svg+xml' style='margin-top:20px;'/>	"; -->
 			}
 			function mouseover2(){
-				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+					$('#sgd2').addClass('mydiv');
+<!-- 				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian1.svg' type='image/svg+xml' style='margin-top:0px;'/>	"; -->
 			}
 			function mouseout2(){
-				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+					$('#sgd2').removeClass('mydiv');
+<!-- 				document.getElementById("sgd2").innerHTML="<embed id ='svg1' src='svg/daodian.svg' type='image/svg+xml' style='margin-top:20px;'/>	"; -->
 			}
 			function mouseover3(){
-				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+					$('#sgd3').addClass('mydiv');
+<!-- 				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing1.svg' type='image/svg+xml' style='margin-top:0px;'/>	"; -->
 			}
 			function mouseout3(){
-				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+					$('#sgd3').removeClass('mydiv');
+<!-- 				document.getElementById("sgd3").innerHTML="<embed id ='svg1' src='svg/zaoxing.svg' type='image/svg+xml' style='margin-top:20px;'/>	"; -->
 			}
 			function mouseover5(){
-				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+					$('#sgd5').addClass('mydiv');
+<!-- 				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi1.svg' type='image/svg+xml' style='margin-top:0px;'/>	"; -->
 			}
 			function mouseout5(){
-				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+					$('#sgd5').removeClass('mydiv');
+<!-- 				document.getElementById("sgd5").innerHTML="<embed id ='svg1' src='svg/houqi.svg' type='image/svg+xml' style='margin-top:20px;'/>	"; -->
 			}
 			function mouseover4(){
-				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe1.svg' type='image/svg+xml' style='margin-top:00px;'/>";
+					$('#sgd4').addClass('mydiv');
+<!-- 				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe1.svg' type='image/svg+xml' style='margin-top:00px;'/>"; -->
 			}
 			function mouseout4(){
-				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe.svg' type='image/svg+xml' style='margin-top:20px;'/>";
+					$('#sgd4').removeClass('mydiv');
+<!-- 				document.getElementById("sgd4").innerHTML="<embed src='svg/paishe.svg' type='image/svg+xml' style='margin-top:20px;'/>"; -->
 			}
 			function mouseover6(){
-				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao1.svg' type='image/svg+xml' style='margin-top:0px;'/>	";
+					$('#sgd6').addClass('mydiv');
+<!-- 				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao1.svg' type='image/svg+xml' style='margin-top:0px;'/>	"; -->
 			}
 			function mouseout6(){
-				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao.svg' type='image/svg+xml' style='margin-top:20px;'/>	";
+					$('#sgd6').removeClass('mydiv');
+<!-- 				document.getElementById("sgd6").innerHTML="<embed id ='svg1' src='svg/quzhao.svg' type='image/svg+xml' style='margin-top:20px;'/>	"; -->
 			}
 		</script>
 		
 		<div id="part2">
 			<div class="col-md-2" ></div>
 			<div class="col-md-8" align="center">
-				<p style="font-family:'华文软黑';font-size: 24px;margin-top:30px;margin-bottom:20px;">服务流程
-				<p style="font-family:'华文软黑';font-size: 16px;margin-bottom:16px;">微笑时刻，致力于最美证件照、形象照。以最专业的服务为顾客提供最舒适的拍照体验。
+				<p style="font-family:'华文细黑';font-size: 24px;margin-top:30px;margin-bottom:20px;">服务流程
+				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:38px;">微笑时刻，致力于最美证件照、形象照。以最专业的服务为顾客提供最舒适的拍照体验。
 				<div class=row>
-					<div class="col-md-2" align="center" style="height:360px;"  onmouseover="mouseover1()" onmouseout="mouseout1()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd1" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
-							<embed id ="svg1" src="svg/weixin.svg" type="image/svg+xml" style="margin-bottom:0px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">预约
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">关注微笑时刻公众号进行自主预约，根据您自己的时间选择店铺和时间进行预约。
+					<div class="col-md-2" align="center" style="height:280px;"  >
+
+						<div id ="sgd1"  style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover1()" onmouseleave="mouseout1()">
+							<div style="height:80px;"><img  src="img/预约.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">预约
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">关注微笑时刻公众号进行自主预约，根据您自己的时间选择店铺和时间进行预约。
 						</div>
 					</div>
-					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover2()" onmouseout="mouseout2()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd2" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
-							<embed src="svg/daodian.svg" type="image/svg+xml" style="margin-top:20px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">到店
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">根据您手机预定的时间准时到您预约的店铺，我们会有专业的服务人员为您服务。
+					<div class="col-md-2" align="center" style="height:280px;" >
+
+						<div id ="sgd2" style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover2()" onmouseleave="mouseout2()">
+							<div style="height:80px;"><img  src="img/到店.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">到店
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">根据您手机预定的时间准时到您预约的店铺，我们会有专业的服务人员为您服务。
 						</div>
 					</div>
-					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover3()" onmouseout="mouseout3()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd3" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
-							<embed src="svg/zaoxing.svg" type="image/svg+xml" style="margin-top:20px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">造型
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">专业化妆师会根据您的照片用途、职业属性、五官特点等量身定制拍摄妆容和服装搭配。
+					<div class="col-md-2" align="center" style="height:280px;" >
+
+						<div id ="sgd3" style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover3()" onmouseleave="mouseout3()">
+							<div style="height:80px;"><img  src="img/化妆.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">造型
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">专业化妆师根据照片用途、职业属性、五官特点等量身定制拍摄妆容和服装搭配。
 						</div>
 					</div>
-					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover4()" onmouseout="mouseout4()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd4" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;" onmouseover="mouseover4()" onmouseout="mouseout4()">
-							<embed src="svg/paishe.svg" type="image/svg+xml" style="margin-top:20px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">拍照
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">专业摄影师会调整您的身体姿态和面部神态，提升面部仪表形象，达到最佳拍摄效果。
+					<div class="col-md-2" align="center" style="height:280px;" >
+
+						<div id ="sgd4" style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover4()" onmouseleave="mouseout4()">
+							<div style="height:80px;"><img  src="img/拍摄.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">拍摄
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">专业摄影师会调整您的身体姿态和面部神态，提升仪表形象，达到最佳拍摄效果。
 						</div>
 					</div>
-					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover5()" onmouseout="mouseout5()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd5" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
-							<embed src="svg/houqi.svg" type="image/svg+xml" style="margin-top:20px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0; height:203px;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">后期
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">资深修图师会对照片进行2专业较色，并根据照片用途和个性化进行精修美化。
+					<div class="col-md-2" align="center" style="height:280px;">
+
+						<div id ="sgd5" style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover5()" onmouseleave="mouseout5()">
+							<div style="height:80px;"><img  src="img/后期.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">后期
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">资深修图师会对照片进行专业较色，并根据照片用途和个性化进行精修美化。
 						</div>
 					</div>
-					<div class="col-md-2" align="center" style="height:360px;" onmouseover="mouseover6()" onmouseout="mouseout6()">
-						<p>R:255
-						<p>G:255
-						<p>B:255
-						<div id ="sgd6" style="width:100%;background-color:#FFFFFF;margin-top:10px;height:80px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;border-bottom-style:none;">
-							<embed src="svg/quzhao.svg" type="image/svg+xml" style="margin-top:20px;"/>	
-						</div>
-						<div style="width:100%;background-color:#FFFFFF;padding:0px 10px 20px 12px; border-style:solid;
-border-width:1px;border-color:#C0C0C0;height:203px;">
-							<p style="font-family:'华文软黑';font-size: 22px;margin-bottom:12px;margin-top:10px;">取照
-							<p style="font-family:'华文软黑';font-size: 14px;text-align:left">照片经过高精度冲印和裁剪，装袋包装，用独具匠心，把精致呈现给您。
+					<div class="col-md-2" align="center" style="height:280px;" >
+
+						<div id ="sgd6" style="width:105%;background-color:#FFFFFF;margin-top:10px;height:220px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover6()" onmouseleave="mouseout6()">
+							<div style="height:80px;"><img  src="img/取照.png" style="margin-top:20px;" height="50" width="50" alt=""></div>
+							<hr style="width:100%; margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
+							<p style="font-family:'华文细黑';font-size: 22px;margin-bottom:8px;margin-top:6px;">取照
+							<p style="margin-left: 10px;margin-right:6px;font-family:'华文细黑';font-size: 10px;text-align:left;text-align:justify;text-justify:inter-ideograph;">照片经过高精度冲印和裁剪，装袋包装，用独具匠心，把精致呈现给您。
 						</div>
 					</div>
 					
@@ -295,7 +284,7 @@ border-width:1px;border-color:#C0C0C0;height:203px;">
 			</div>
 			<div class="col-md-2" ></div>
 		</div>
-		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: #e0e0e0;background-color: #e0e0e0; height: 1px">
 		
 		<script language =javascript >
 			var curIndex2=0;
@@ -309,11 +298,11 @@ border-width:1px;border-color:#C0C0C0;height:203px;">
 			arr2[3]="img/xingxiang4.jpg";
 			arr2[4]="img/xingxiang5.jpg";
 			arr2[5]="img/xingxiang6.jpg";
-			setInterval(changeImg2,timeInterval2);
+			//setInterval(changeImg2,timeInterval2);
 			function changeImg2()
 			{
-				document.getElementById("intro"+((curIndex2+1)%numpage2+1)).style.color="#f6ca38";
-				document.getElementById("intro"+((curIndex2+2)%numpage2+1)).style.color="#000000";
+				//document.getElementById("intro"+((curIndex2+1)%numpage2+1)).style.color="#f6ca38";
+				//document.getElementById("intro"+((curIndex2+2)%numpage2+1)).style.color="#000000";
 				document.getElementById("src1").src=arr2[curIndex2%numpage2];
 				document.getElementById("src2").src=arr2[(curIndex2+1)%numpage2];
 				document.getElementById("src3").src=arr2[(curIndex2+2)%numpage2];
@@ -326,10 +315,10 @@ border-width:1px;border-color:#C0C0C0;height:203px;">
 					curIndex2-=1;
 				}
 			}
-			function setnextImg2(){
+			function setpreviousImg2(){
 				changeImg2();
 			}
-			function setpreviousImg2(){
+			function setnextImg2(){
 				curIndex2=(curIndex2+2)%numpage2;
 				document.getElementById("src1").src=arr2[curIndex2%numpage2];
 				document.getElementById("src2").src=arr2[(curIndex2+1)%numpage2];
@@ -348,183 +337,274 @@ border-width:1px;border-color:#C0C0C0;height:203px;">
 		<div id="part3" class="row" style="padding:46px 0px 16px 0px;">
 			  <div class="col-md-1" ></div>
 			  <div class="col-md-1"  style="height:568px;">
-				<div style="height:568px;padding:12px 0px 12px 0px;" align=center>
-					<img  src="img/previous.png" onclick="setpreviousImg2()" height="30" width="18" alt="" style="margin-top:210px;">
+				<div style="height:238px;padding:12px 0px 12px 0px;margin-top:150px;" align=center  onclick="setpreviousImg2()">
+					<img  src="img/previous.png" height="30" width="18" alt="" style="margin-top:90px;">
 				</div>
 			  </div>
-			  <div class="col-md-8" >
-				<div>
-					<img id="src1" class="gray" src="img/xingxiang1.jpg" height="432" width="280" alt="" >
-					<img id="src2" src="img/xingxiang2.jpg" height="472" width="300" alt="" >
-					<img id="src3" class="gray" src="img/xingxiang3.jpg" height="432" width="280" alt="" >
-				</div>
+			  <div class="col-md-8" style="padding:0;">
+				<div style="padding:0;">
+					<img id="src1" class="gray mydiv1" src="img/xingxiang1.jpg" height="432" width="30%" style="margin-bottom:0;vertical-align:bottom">
+					<img id="src2" class="mydiv1" src="img/xingxiang2.jpg" height="472" width="38%" style="margin-bottom:0;vertical-align:bottom" >
+					<img id="src3" class="gray mydiv1" src="img/xingxiang3.jpg" height="432" width="30%" style="margin-bottom:0;vertical-align:bottom" >
+				</div> 
+				
+<!-- 				<div id="Slide1" class="zy-Slide">
+	<section>前一张</section>
+	<section>后一张</section>
+	<ul>
+		<li><img src="images/1.jpg" /></li>
+		<li><img src="images/2.jpg" /></li>
+		<li><img src="images/3.jpg" /></li>
+		<li><img src="images/4.jpg" /></li>
+		<li><img src="images/5.jpg" /></li>
+		<li><img src="images/6.jpg" /></li>
+		<li><img src="images/7.jpg" /></li>
+	</ul>
+</div>
+<script src="jquery.min.js"></script>
+	<script src="jquery.zySlide.js"></script>
+		<script src="index.js"></script>			
+			 -->	
 				<div align=center style="margin-top:15px">
 					<table style="table-layout:fixed;width:800px;">
 						<tr>
-							<td id="intro1"><p  style="font-family:'华文软黑';font-size: 70%;">ID Photo</p><p>证件照</p><hr style="width:100%;background-color: black; height: 1px"></td>
-							<td id="intro2" style="color:#f6ca38"><p style="font-family:'华文软黑';font-size: 70%;">Image Photo</p><p>形象照</p><hr style="width:100%;background-color: black; height: 1px"></td>
-							<td id="intro3"><p style="font-family:'华文软黑';font-size: 70%;">Team Photo</p><p>团队照</p><hr style="width:100%;background-color: black; height: 1px"></td>
-							<td id="intro4"><p style="font-family:'华文软黑';font-size: 70%;">Marry Photo&nbsp&nbsp</p><p>结婚照&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
-							<td id="intro5"><p style="font-family:'华文软黑';font-size: 10px;">Sociality Photo&nbsp&nbsp</p><p>社交头像&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
-							<td id="intro6"><p id="text6" style="font-family:'华文软黑';font-size: 70%;">Family Photo</p><p>全家福</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
-							<td id="intro7"><p id="text7" style="font-family:'华文软黑';font-size: 70%;">More</p><p>更多</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro1" style="text-align:center;"><p  style="font-family:'华文细黑';font-size: 70%;">ID Photo</p><p>证件照</p><hr style="width:100%;background-color: black; height: 1px"></td>
+							<td id="intro2" style="color:#f6ca38;text-align:center;"><p style="font-family:'华文细黑';font-size: 70%;">Image Photo</p><p>形象照</p><hr style="width:100%;background-color:#f6ca38; height: 3px"></td>
+							<td id="intro3" style="text-align:center;"><p style="font-family:'华文细黑';font-size: 70%;">Team Photo</p><p>团队照</p><hr style="width:100%;background-color: black; height: 1px"></td>
+							<td id="intro4" style="text-align:center;"><p style="font-family:'华文细黑';font-size: 70%;">Marry Photo&nbsp&nbsp</p><p>结婚照&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro5" style="text-align:center;"><p style="font-family:'华文细黑';font-size: 10px;">Sociality Photo&nbsp&nbsp</p><p>社交头像&nbsp&nbsp</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro6" style="text-align:center;"><p id="text6" style="font-family:'华文细黑';font-size: 70%;">Family Photo</p><p>全家福</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
+							<td id="intro7" style="text-align:center;"><p id="text7" style="font-family:'华文细黑';font-size: 70%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">More</p><p>更多</p><hr style="width:100%;color: black;background-color: black; height: 1px"></td>
 						</tr>
 					</table>
 				</div>
 			  </div>
-			  <div class="col-md-1"  style="height:568px;">
-				<div style="height:568px;padding:12px 0px 12px 0px;" onclick="setnextImg2()" align=center>
-					<img  src="img/next.png" height="30" width="18" alt="" style="margin-top:210px;">
+			  <div class="col-md-1"  style="height:568px;" onclick="setnextImg2()">
+				<div style="height:238px;padding:12px 0px 12px 0px;margin-top:150px;" align=center>
+					<img  src="img/next.png" height="30" width="18" alt="" style="margin-top:90px;">
 				</div>
 			  </div>
 			  <div class="col-md-1" ></div>
 			
 		</div>
-		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px">
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: 	#E0E0E0;background-color: 	#E0E0E0; height: 1px">
 		
 		<script type="text/javascript">
-		var end=1;
-		function mouseOver1(obj)
+		function mouseOver1()
 		{
 			//alert(document.getElementById("s1").style);
-			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
-			if(end==1){
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			mouseOut2()
+			mouseOut3()
+			mouseOut4()
+			mouseOut5()
 			document.getElementById("s1").style.width="350px";
+			$("#content1").removeClass('mydiv3');
 			document.getElementById("s1").style.padding="0";
-			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>国贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
-			}
+			document.getElementById("s1").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>国贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
 		}
-		function mouseOut1(obj)
+		function mouseOut1()
 		{
-			end=0;
 			document.getElementById("s1").style.width="300px";
 			document.getElementById("s1").style.padding="10px 0 0 10px";
-			obj.innerHTML="<span >国贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s1").innerHTML="<span >国贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
 			document.getElementById("s1").style.width="300px";
 			document.getElementById("s1").style.padding="10px 0 0 10px";
-			end=1;
+			$("#content1").addClass('mydiv3');
 		}
 		
-		function mouseOver2(obj)
+		function mouseOver2()
 		{
 			//alert(document.getElementById("s1").style);
-			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
-			if(end==1){
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			mouseOut1()
+			mouseOut3()
+			mouseOut4()
+			mouseOut5()
 			document.getElementById("s2").style.width="350px";
 			document.getElementById("s2").style.padding="0";
-			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>四道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
-			}
-			
+			$("#content2").removeClass('mydiv3');
+			document.getElementById("s2").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>四道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";	
 		}
-		function mouseOut2(obj)
+		function mouseOut2()
 		{
-		end =0;
 			document.getElementById("s2").style.width="300px";
 			document.getElementById("s2").style.padding="10px 0 0 10px";
-			obj.innerHTML="<span >四道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s2").innerHTML="<span >四道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
 			document.getElementById("s2").style.width="300px";
 			document.getElementById("s2").style.padding="10px 0 0 10px";
-			end =1;
+			$("#content2").addClass('mydiv3');
 		}
 		
-		function mouseOver3(obj)
+		function mouseOver3()
 		{
 			//alert(document.getElementById("s1").style);
-			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
-			if(end==1){
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			mouseOut1()
+			mouseOut2()
+			mouseOut4()
+			mouseOut5()
 			document.getElementById("s3").style.width="350px";
 			document.getElementById("s3").style.padding="0";
-			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>五道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
-			}
-			
+			$("#content3").removeClass('mydiv3');
+			document.getElementById("s3").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>五道口店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
 		}
-		function mouseOut3(obj)
+		function mouseOut3()
 		{
-		end =0;
 			document.getElementById("s3").style.width="300px";
 			document.getElementById("s3").style.padding="10px 0 0 10px";
-			obj.innerHTML="<span >五道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
-			document.getElementById("s2").style.width="300px";
-			document.getElementById("s2").style.padding="10px 0 0 10px";
-			end =1;
+			document.getElementById("s3").innerHTML="<span >五道口店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s3").style.width="300px";
+			document.getElementById("s3").style.padding="10px 0 0 10px";
+			$("#content3").addClass('mydiv3');
 		}
-		function mouseOver4(obj)
+		function mouseOver4()
 		{
 			//alert(document.getElementById("s1").style);
-			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
-			if(end==1){
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			mouseOut1()
+			mouseOut2()
+			mouseOut3()
+			mouseOut5()
 			document.getElementById("s4").style.width="350px";
 			document.getElementById("s4").style.padding="0";
-			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>魏公村店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
-			}
+			$("#content4").removeClass('mydiv3');
+			document.getElementById("s4").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>魏公村店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
 		}
-		function mouseOut4(obj)
+		function mouseOut4()
 		{
-		end =0;
 			document.getElementById("s4").style.width="300px";
 			document.getElementById("s4").style.padding="10px 0 0 10px";
-			obj.innerHTML="<span >魏公村店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s4").innerHTML="<span >魏公村店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
 			document.getElementById("s4").style.width="300px";
 			document.getElementById("s4").style.padding="10px 0 0 10px";
-			end =1;
+			$("#content4").addClass('mydiv3');
 		}
 		
-		function mouseOver5(obj)
+		function mouseOver5()
 		{
 			//alert(document.getElementById("s1").style);
-			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-bottom-style:none;";
-			if(end==1){
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			mouseOut1()
+			mouseOut2()
+			mouseOut3()
+			mouseOut4()
 			document.getElementById("s5").style.width="350px";
 			document.getElementById("s5").style.padding="0";
-			obj.innerHTML="<div style='width:20px;border-style:solid;border-width:2px;border-color:#D0D0D0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>外经贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
-			}
+			$("#content5").removeClass('mydiv3');
+			document.getElementById("s5").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>外经贸店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</span>";
 		}
-		function mouseOut5(obj)
+		function mouseOut5()
 		{
-		end =0;
 			document.getElementById("s5").style.width="300px";
 			document.getElementById("s5").style.padding="10px 0 0 10px";
-			obj.innerHTML="<span>外经贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s5").innerHTML="<span>外经贸店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
 			document.getElementById("s5").style.width="300px";
 			document.getElementById("s5").style.padding="10px 0 0 10px";
-			end =1;
+			$("#content5").addClass('mydiv3');
 		}
 		</script>
 		
 		<div id="part4" class="row" style="padding:26px 0px 16px 0px;">
+		
 			  <div class="col-md-2" ></div>
-			  <div class="col-md-4" >
-				<div style="width:300px;background-color:#FFFFFF;height:104px;padding:30px 0px 0px 20px;border-style:solid;
-border-width:2px;border-color:#C0C0C0;border-bottom-style:none;"><span >北京</span></div>
-				<div id="s1" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
-border-width:2px;border-color:#C0C0C0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver1(this)" onmouseout="mouseOut1(this)"><span >国贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div id="s2" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
-border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver2(this)" onmouseout="mouseOut2(this)"><span>四道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div id="s3" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
-border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver3(this)" onmouseout="mouseOut3(this)"><span>五道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div id="s4" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
-border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver4(this)" onmouseout="mouseOut4(this)"><span>魏公村店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div id="s5" style="width:300px;background-color:#FFFFFF;height:52px;border-style:solid;
-border-width:2px;border-color:#D0D0D0;border-bottom-style:none;padding:10px 0 0 10px;" onmouseover="mouseOver5(this)" onmouseout="mouseOut5(this)"><span>外经贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div style="width:300px;background-color:#FFFFFF;height:106px;border-style:solid;
-border-width:2px;border-color:#D0D0D0;"></div>
+			  <div class="col-md-4" style="height:475px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;">
+				<div class="mydiv mydiv2" style="width:300px;background-color:#FFFFFF;height:104px;padding:30px 0px 0px 20px;"><span >北京</span></div>
+				<div class="mydiv" id="s1" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onmouseover="mouseOver1()" onmouseleave="mouseOut1()"><span >国贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv" id="s2" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onmouseover="mouseOver2()" onmouseleave="mouseOut2()"><span>四道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv" id="s3" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onmouseover="mouseOver3()" onmouseleave="mouseOut3()"><span>五道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv" id="s4" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onmouseover="mouseOver4()" onmouseleave="mouseOut4()"><span>魏公村店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv" id="s5" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onmouseover="mouseOver5()" onmouseleave="mouseOut5()"><span>外经贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv mydiv4" style="width:300px;background-color:#FFFFFF;height:106px;"></div>
 			  </div>
-			  <div class="col-md-4" style="padding:40px 100px 20px 60px;background-color:#FFFFFF;border-style:solid;
-border-width:2px;border-color:#D0D0D0;">
-				<div id="content">
+			  <div class="col-md-4 mydiv" style="padding:40px 100px 20px 60px;background-color:#FFFFFF;height:473px;width:485px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;">
+				<div id="content1">
+					<p>国贸店</p>
+					<p>Add:九龙山地铁站西边200米红点艺术工厂207  
+					<p>Tel: 010-59437227
+					<p>途经公交：307路;331路;375路;429路;508路;</br>
+					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
+					<p>地铁：13号线B出口直走500米即到
+					<!-- <img src="img/ditu1.png" height="214" width="270" alt="" ></img> -->
+					<div id="allmap1" class="allmap" style="height:270px;weight:214px;"></div>
+				</div>
+				<div id="content2" class="mydiv3">
+					<p>四道口店</p>
+					<p>Add:学院南路智慧大厦301A 
+					<p>Tel: 010-59433018
+					<p>途经公交：307路;331路;375路;429路;508路;</br>
+					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
+					<p>地铁：13号线B出口直走500米即到
+					<div id="allmap2" class="allmap" style="height:270px;weight:214px;"></div>
+				</div>
+				<div id="content3" class="mydiv3">
 					<p>五道口店</p>
 					<p>Add:海淀区五道口华清商务会馆601室
 					<p>Tel: 010-59436010
 					<p>途经公交：307路;331路;375路;429路;508路;</br>
 					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
 					<p>地铁：13号线B出口直走500米即到
-					<img src="img/ditu1.png" height="214" width="270" alt="" ></img>
+					<div id="allmap3" class="allmap" style="height:270px;weight:214px;"></div>
+				</div>
+				<div id="content4" class="mydiv3">
+					<p>魏公村店</p>
+					<p>Add:中关村南大街中关村科技发展大厦C座207
+					<p>Tel: 010-59436657
+					<p>途经公交：307路;331路;375路;429路;508路;</br>
+					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
+					<p>地铁：13号线B出口直走500米即到
+					<div id="allmap4" class="allmap" style="height:270px;weight:214px;"></div>
+				</div>
+				<div id="content5" class="mydiv3">
+					<p>外经贸店</p>
+					<p>Add:惠新东街11号紫光发展大厦B座2单元402室
+					<p>Tel: 010-59438919
+					<p>途经公交：307路;331路;375路;429路;508路;</br>
+					<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp549路;562路;630路;86路;126路</span>
+					<p>地铁：13号线B出口直走500米即到
+					<div id="allmap5" class="allmap" style="height:270px;weight:214px;"></div>
 				</div>
 			  </div>
 			  <div class="col-md-2" ></div>
 			
 		</div>
-		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: black;background-color: black; height: 1px;display:none;">
+		
+		
+		<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap1");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	
+		var map = new BMap.Map("allmap2");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	
+		var map = new BMap.Map("allmap3");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	
+		var map = new BMap.Map("allmap4");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	
+		var map = new BMap.Map("allmap5");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+
+		
+		<hr style="width:100%; margin-top:7px;*margin: 0;order: 0;color: 	#E0E0E0;background-color: 	#E0E0E0; height: 1px;display:none;">
 		<div id="footer" class="row" style="background-color:#FFCC33;">
 			<div class="col-md-2" ></div>
 			<div class="col-md-8" align="center">
@@ -532,18 +612,18 @@ border-width:2px;border-color:#D0D0D0;">
 				<p style="font-size:16px;" align="center">匠人精神，用照片致敬“匠人精神”。方寸之间，见真功夫。在通往极致的路上，我们从没有懈怠。
 				<form action="#" method="get">
 					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
-						<input type="text" name="email" style="height:42px;margin-right:4%;width:36%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    email"/>
+						<input type="text" name="email" style="height:42px;margin-right:5%;width:36%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
 						<input type="text" style="height:42px;width:36%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    profession"/>
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
 					</div>
 					<div style="width:90%">
-						<input type="text" style="height:42px;width:77%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;" value="    Message"/></br>
+						<input type="text" style="height:142px;width:77%;border-style:solid;
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
 					</div>
 					<div style="width:90%">
 						<input type="submit" style="height:42px;width:77%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;margin-top:26px;" value="send message"/>
+border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#FFCC33;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
 					</div>
 					
 					<div style="width:90%">
@@ -612,11 +692,11 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 
 	
 		<div class="modal fade" id="globalMsgModal" tabindex="-1" role="dialog" aria-labelledby="globalMsgModalLabel">
-			<div class="modal-dialog" role="document">
-					<div class="modal-content">
+			<div class="modal-dialog" role="document" style="width:240px;height:300px;margin-left: 60%;margin-top: 12%;">
+					<div class="modal-content" >
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:30%">请扫描下方二维码预约</h4>
+							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:10%">请扫描下方二维码预约</h4>
 						</div>
 						<div class="modal-body">
 							<div class="alert alert-success" style="display:none">
@@ -628,7 +708,7 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 							<div class="alert alert-danger" style="display:none">
 							</div>
 							<div align=center>
-							<img src="img/erweima.jpg" height="488" width="488" alt="" style="margin:20px 20px 20px 20px;";></img>
+							<img src="img/erweima.jpg" height="200" width="200" alt="" style="margin:10px;";></img>
 							</div>
 						</div>
 						<!--div class="modal-footer">
@@ -685,64 +765,38 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 							  <div id= "sdsd" align=center class="swiper-wrapper" style=" transition: 0.3s; -webkit-transition: 0.3s; -webkit-transform: translate3d(-364px, 0px, 0px); width: 7280px; height: 500px;">
 								<div class="swiper-slide swiper-slide-visible" style="width:364px;">
 								  <div class="inner"> 
-									<img  src="img/gallery-2.jpg " style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg"  style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+									<img  src="img/gallery-2.jpg " style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg"  style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide swiper-slide-visible" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide swiper-slide-visible" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-2.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-5.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
 								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
+								  <div class="inner"> <img src="img/gallery-6.jpg" style="height:150px;margin-bottom:50px;" data-toggle="modal" data-target="#myModal2" alt=""><br/><img src="img/gallery-2.jpg" style="height:150px;" data-toggle="modal" data-target="#myModal2" alt=""> </div>
 								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
-								</div>
-								<div class="swiper-slide" style="width: 364px;">
-								  <div class="inner"> <img src="img/gallery-7.jpg" style="height:200px;" alt=""><br/><img src="img/gallery-2.jpg" style="height:200px;" alt=""> </div>
 								</div>
 							</div>
 						</div>

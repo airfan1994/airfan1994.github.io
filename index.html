@@ -30,17 +30,17 @@
 			</div>
 			<hr style="width:100%; margin-top:0px;*margin: 0;order: 0;color: 	#E0E0E0;background-color: 	#E0E0E0; height: 1px"-->
 			<script language="javascript">
-				function stro0(){ $("html,body").animate({scrollTop: $("#logopart").offset().top}, 666);
+				function stro0(){ $("html,body").animate({scrollTop: 0}, 666);
 				}
-				function stro1(){ $("html,body").animate({scrollTop: $("#part1").offset().top}, 666);
+				function stro1(){ $("html,body").animate({scrollTop: $("#part1").offset().top-140}, 666);
 				}
-				function stro2(){ $("html,body").animate({scrollTop: $("#part2").offset().top}, 666);
+				function stro2(){ $("html,body").animate({scrollTop: $("#part2").offset().top-90}, 666);
 				}
-				function stro3(){ $("html,body").animate({scrollTop: $("#part3").offset().top}, 666);
+				function stro3(){ $("html,body").animate({scrollTop: $("#part3").offset().top-90}, 666);
 				}
-				function stro4(){ $("html,body").animate({scrollTop: $("#part4").offset().top}, 666);
+				function stro4(){ $("html,body").animate({scrollTop: $("#part4").offset().top-90}, 666);
 				}
-				function stro5(){ $("html,body").animate({scrollTop: $("#footer").offset().top}, 666);
+				function stro5(){ $("html,body").animate({scrollTop: $("#footer").offset().top-50}, 666);
 				}
 			</script>
 				<div id="navpart" style="height:91px;";>
@@ -140,13 +140,17 @@
 				}
 			}
 		</script>
-		<div id="part1" class="row" style="height:450px;padding:56px 0px 32px 0px;">
+		<div id="part1" class="row" style="height:480px;padding:26px 0px 32px 0px;">
 			  <div class="col-md-1" ></div>
 			  <!--<div class="col-md-1" <!--  style="width:5%;" -->
 			  <div class="col-md-1">
 			  </div>
 			  <div class="col-md-8"  align=center>
-				<p >关于我们</p>
+				<p style="font-family:'华文细黑';font-size: 24px;margin-bottom:20px;">关于我们</p>
+				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">微笑时刻，成立于2015年，主要提供各类证件照、棚拍形象照、棚拍轻写真，发展至今，在北京、天津拥有多家门店，营业面积超过1600㎡，平均每天接待客户600+人；</p>
+				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">我们以现代化的呈现形式，但仍保有老一代人的匠心，勤勤恳恳为大家提供优质照片，在互联网的快速传播下，微笑时刻得以蓬勃发展，我们怀着一颗感恩的心，对待用户，在保证品质的前提下，我们会一步步走到中国的每一座城市，希望把微笑的生活态度传递给每一位年轻人。
+				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">发现美，创造美，传递一种生活态度。
+				
 				
 				<div class = "row">
 					<div class="col-md-4" align=center>
@@ -222,7 +226,8 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8" align="center" style="padding:30px 0px 0px 0px;">
 				<p style="font-family:'华文细黑';font-size: 24px;margin-top:30px;margin-bottom:20px;">服务流程
-				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:38px;">微笑时刻，致力于最美证件照、形象照。以最专业的服务为顾客提供最舒适的拍照体验。
+				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:38px;padding:0px 100px 0px 100px;">微笑时刻，用现代的呈现形式，但仍保有老一代人的匠心，勤勤恳恳为大家带来真正的好照片；
+珍惜你我相遇的缘分，用我的匠心给你以影像的喜悦。</p>
 				<div class=row>
 					<div class="col-md-2" align="center" style="height:280px;min-width:150px;">
 
@@ -329,7 +334,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-zhengjian.png' height='400' width='800' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-zhengjian.png' height='400' width='800' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro1').addClass('val_yellow');
@@ -355,7 +360,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-xingxiang.png' height='400' width='857' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-xingxiang.png' height='400' width='857' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro2').addClass('val_yellow');
@@ -381,7 +386,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-tuandui.png' height='400' width='809' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-tuandui.png' height='400' width='809' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro3').addClass('val_yellow');
@@ -407,7 +412,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-jiehun.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-jiehun.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro4').addClass('val_yellow');
@@ -433,7 +438,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-shejiao.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-shejiao.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro5').addClass('val_yellow');
@@ -459,7 +464,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='mydiv1 animated zoomIn' src='img/part3-quanjia.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-quanjia.png' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro6').addClass('val_yellow');
@@ -484,7 +489,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 				</script>
 				<!-- <div id="picid" style="padding:0;" align="center" class="center animated fadeOutRight"> -->
 				<div id = 'picid' style="padding:0;" align="center" class = "center animated">
-					<img id="src2" class="mydiv1 animated" src="img/part3-zhengjian.png" height="400" width="800" style="margin-bottom:0;vertical-align:bottom" >
+					<img id="src2" class="animated" src="img/part3-zhengjian.png" height="400" width="800" style="margin-bottom:0;vertical-align:bottom" >
 		
 					<p id = "p1" style = "display:none;">sad</p>
 				</div>
@@ -651,20 +656,50 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 			document.getElementById("s5").style.padding="10px 0 0 10px";
 			//$("#content5").addClass('mydiv3');
 		}
-		
+		function mouseOver6()
+		{
+			//alert(document.getElementById("s1").style);
+			//document.getElementById("s1").style="width:350px;background-color:#FFFFFF;height:52px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-bottom-style:none;";
+			$("#content1").addClass('mydiv3');
+			$("#content2").addClass('mydiv3');
+			$("#content3").addClass('mydiv3');
+			$("#content4").addClass('mydiv3');
+			$("#content5").addClass('mydiv3');
+			document.getElementById("s6").style.width="350px";
+			document.getElementById("s6").style.padding="0";
+			$("#content6").removeClass('mydiv3');
+			document.getElementById("s6").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>恒隆店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style = 'font-size:30px;'>-</span></span>";
+		}
+		function tianjin(){
+			$("#s1").addClass('mydiv3');
+			$("#s2").addClass('mydiv3');
+			$("#s3").addClass('mydiv3');
+			$("#s4").addClass('mydiv3');
+			$("#s5").addClass('mydiv3');
+			$("#s6").removeClass('mydiv3');
+		}
+		function beijing(){
+			$("#s1").removeClass('mydiv3');
+			$("#s2").removeClass('mydiv3');
+			$("#s3").removeClass('mydiv3');
+			$("#s4").removeClass('mydiv3');
+			$("#s5").removeClass('mydiv3');
+			$("#s6").addClass('mydiv3');
+		}
 		</script>
 		
 		<div id="part4" class="row" style="padding:26px 0px 16px 0px;">
 		
 			  <div class="col-md-2" ></div>
-			  <div class="col-md-4" style="height:475px;">
-			  <div class="mydiv" style="width:300px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;">
-				<div class="mydiv6 mydiv2" style="width:300px;background-color:#FFFFFF;height:104px;padding:30px 0px 0px 20px;"><span style='margin-left:8px;font-size:25px;'>北京</span><span style='margin-left:58px;font-size:25px;'>天津</span></div>
+			  <div class="col-md-4" style="min-height:475px;">
+			  <div class="mydiv" style="height:471px;width:300px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;">
+				<div class="mydiv6 mydiv2" style="width:300px;background-color:#FFFFFF;height:104px;padding:30px 0px 0px 20px;"><span style='margin-left:8px;font-size:25px;' onclick="beijing()">北京</span><span style='margin-left:58px;font-size:25px;' onclick="tianjin()">天津</span></div>
 				<div class="mydiv6" id="s1" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver1()"><span style='margin-left:20px;'>国贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6" id="s2" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver2()"><span style='margin-left:20px;'>四道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6" id="s3" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver3()"><span style='margin-left:20px;'>五道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6" id="s4" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver4()"><span style='margin-left:20px;'>魏公村店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6" id="s5" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver5()"><span style='margin-left:20px;'>外经贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv6 mydiv3" id="s6" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;" onclick="mouseOver6()"><span style='margin-left:20px;'>恒隆店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv4" style="width:300px;background-color:#FFFFFF;height:106px;"></div>
 			  </div>
 			  </div>
@@ -699,6 +734,12 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 					<p style="margin-bottom:10px;">Add:惠新东街11号紫光发展大厦B座2单元402室
 					<p>Tel: 010-59438919
 					<div id="allmap5" class="allmap" style="margin-top:40px;height: 200px;width:100%;"></div>
+				</div>
+				<div id="content6" class="mydiv3">
+					<p style="margin-bottom:20px;">恒隆店</p>
+					<p style="margin-bottom:10px;"> Add:天津市和平区滨江道恒隆广场5039商铺
+					<p>Tel：022-27300585
+					<div id="allmap6" class="allmap" style="margin-top:40px;height: 200px;width:100%;"></div>
 				</div>
 			  </div>
 			  <div class="col-md-2" ></div>
@@ -737,6 +778,12 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
 	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	
+			var map = new BMap.Map("allmap6");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 </script>
 		<script language = "javascript">
 		var timestampdown = new Date().getTime();
@@ -754,12 +801,12 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 		timestampdown = new Date().getTime();
 	}
 
-	function mouseUp(src_name)
+	function mouseUp(obj)
 	{
 	timestampup = new Date().getTime();
 		mouseButtonDown=false;
 		if(timestampup-timestampdown<=200){
-			$("#tuku_img").attr('src',src_name);
+			$("#tuku_img").attr('src',obj.src);
 			$('#myModal2').modal({
         keyboard: true
     });
@@ -855,7 +902,7 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 
 	
 		<div class="modal fade" id="globalMsgModal" tabindex="-1" role="dialog" aria-labelledby="globalMsgModalLabel">
-			<div class="modal-dialog" role="document" style="width:220px;height:320px;margin-left: 69%;margin-top: 12%;" align=center>
+			<div class="modal-dialog" role="document" style="width:220px;height:320px;margin-left: 67%;margin-top: 5%;" align=center>
 					<div class="modal-content" align=center>
 						<img src="img/版式.png" height="300" width="200" alt="" style="margin:10px;";></img>
 					</div>
@@ -867,6 +914,102 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 			<!-- $('#globalMsgModals').modal({ -->
 				<!-- keyboard: true -->
 			<!-- }); -->
+				$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").removeClass('mydiv3');
+				$("#pic_div5").removeClass('mydiv3');
+				$("#pic_div6").removeClass('mydiv3');
+				$("#pic_div7").removeClass('mydiv3');
+				$("#pic_div8").removeClass('mydiv3');
+				$("#pic_div9").removeClass('mydiv3');
+				$("#pic_div10").removeClass('mydiv3');
+				$("#pic_div11").removeClass('mydiv3');
+				$("#pic_div12").removeClass('mydiv3');
+				$("#pic_div13").removeClass('mydiv3');
+				$("#pic_div14").removeClass('mydiv3');
+				$("#pic_div15").removeClass('mydiv3');
+				$("#pic_div16").removeClass('mydiv3');
+				$("#pic_div17").removeClass('mydiv3');
+				$("#pic_div18").removeClass('mydiv3');
+				$("#pic_div19").removeClass('mydiv3');
+				$("#pic_div20").removeClass('mydiv3');
+				$("#pic_div21").removeClass('mydiv3');
+				$("#pic_div22").removeClass('mydiv3');
+				$("#pic_div23").removeClass('mydiv3');
+				$("#pic_div24").removeClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/zhengjian/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/zhengjian/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/zhengjian/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/zhengjian/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/zhengjian/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/zhengjian/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/zhengjian/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/zhengjian/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/zhengjian/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/zhengjian/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/zhengjian/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/zhengjian/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/zhengjian/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/zhengjian/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/zhengjian/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/zhengjian/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/zhengjian/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/zhengjian/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/zhengjian/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/zhengjian/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/zhengjian/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/zhengjian/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/zhengjian/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/zhengjian/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/zhengjian/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/zhengjian/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/zhengjian/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/zhengjian/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/zhengjian/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/zhengjian/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/zhengjian/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/zhengjian/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/zhengjian/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/zhengjian/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/zhengjian/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/zhengjian/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/zhengjian/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/zhengjian/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/zhengjian/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/zhengjian/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/zhengjian/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/zhengjian/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/zhengjian/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/zhengjian/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/zhengjian/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/zhengjian/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/zhengjian/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/zhengjian/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/zhengjian/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/zhengjian/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/zhengjian/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/zhengjian/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/zhengjian/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/zhengjian/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/zhengjian/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/zhengjian/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/zhengjian/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/zhengjian/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/zhengjian/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/zhengjian/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/zhengjian/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/zhengjian/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/zhengjian/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/zhengjian/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/zhengjian/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/zhengjian/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/zhengjian/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/zhengjian/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/zhengjian/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/zhengjian/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/zhengjian/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/zhengjian/72.jpg");
 				$("#tukudiv1").addClass('tukudiv_active');
 				$("#tukudiv1").removeClass('tukudiv');
 				$("#tukuhr1").addClass('tukuhr_active');
@@ -893,7 +1036,102 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 				$("#tukuhr6").removeClass('tukuhr_active');
 			}
 			function tuku2(){
-				$("#tuku_pic1").attr('src',"img/tuku/xingxiang/3.jpg");
+							$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").removeClass('mydiv3');
+				$("#pic_div5").removeClass('mydiv3');
+				$("#pic_div6").removeClass('mydiv3');
+				$("#pic_div7").removeClass('mydiv3');
+				$("#pic_div8").removeClass('mydiv3');
+				$("#pic_div9").removeClass('mydiv3');
+				$("#pic_div10").removeClass('mydiv3');
+				$("#pic_div11").removeClass('mydiv3');
+				$("#pic_div12").removeClass('mydiv3');
+				$("#pic_div13").removeClass('mydiv3');
+				$("#pic_div14").removeClass('mydiv3');
+				$("#pic_div15").removeClass('mydiv3');
+				$("#pic_div16").removeClass('mydiv3');
+				$("#pic_div17").removeClass('mydiv3');
+				$("#pic_div18").removeClass('mydiv3');
+				$("#pic_div19").removeClass('mydiv3');
+				$("#pic_div20").removeClass('mydiv3');
+				$("#pic_div21").removeClass('mydiv3');
+				$("#pic_div22").addClass('mydiv3');
+				$("#pic_div23").addClass('mydiv3');
+				$("#pic_div24").addClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/xingxiang/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/xingxiang/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/xingxiang/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/xingxiang/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/xingxiang/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/xingxiang/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/xingxiang/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/xingxiang/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/xingxiang/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/xingxiang/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/xingxiang/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/xingxiang/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/xingxiang/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/xingxiang/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/xingxiang/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/xingxiang/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/xingxiang/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/xingxiang/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/xingxiang/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/xingxiang/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/xingxiang/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/xingxiang/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/xingxiang/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/xingxiang/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/xingxiang/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/xingxiang/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/xingxiang/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/xingxiang/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/xingxiang/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/xingxiang/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/xingxiang/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/xingxiang/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/xingxiang/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/xingxiang/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/xingxiang/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/xingxiang/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/xingxiang/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/xingxiang/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/xingxiang/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/xingxiang/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/xingxiang/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/xingxiang/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/xingxiang/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/xingxiang/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/xingxiang/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/xingxiang/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/xingxiang/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/xingxiang/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/xingxiang/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/xingxiang/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/xingxiang/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/xingxiang/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/xingxiang/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/xingxiang/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/xingxiang/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/xingxiang/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/xingxiang/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/xingxiang/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/xingxiang/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/xingxiang/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/xingxiang/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/xingxiang/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/xingxiang/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/xingxiang/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/xingxiang/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/xingxiang/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/xingxiang/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/xingxiang/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/xingxiang/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/xingxiang/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/xingxiang/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/xingxiang/72.jpg");
 				$("#tukudiv2").addClass('tukudiv_active');
 				$("#tukudiv2").removeClass('tukudiv');
 				$("#tukuhr2").addClass('tukuhr_active');
@@ -920,6 +1158,102 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 				$("#tukuhr6").removeClass('tukuhr_active');
 			}
 			function tuku3(){
+				$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").removeClass('mydiv3');
+				$("#pic_div5").removeClass('mydiv3');
+				$("#pic_div6").removeClass('mydiv3');
+				$("#pic_div7").addClass('mydiv3');
+				$("#pic_div8").addClass('mydiv3');
+				$("#pic_div9").addClass('mydiv3');
+				$("#pic_div10").addClass('mydiv3');
+				$("#pic_div11").addClass('mydiv3');
+				$("#pic_div12").addClass('mydiv3');
+				$("#pic_div13").addClass('mydiv3');
+				$("#pic_div14").addClass('mydiv3');
+				$("#pic_div15").addClass('mydiv3');
+				$("#pic_div16").addClass('mydiv3');
+				$("#pic_div17").addClass('mydiv3');
+				$("#pic_div18").addClass('mydiv3');
+				$("#pic_div19").addClass('mydiv3');
+				$("#pic_div20").addClass('mydiv3');
+				$("#pic_div21").addClass('mydiv3');
+				$("#pic_div22").addClass('mydiv3');
+				$("#pic_div23").addClass('mydiv3');
+				$("#pic_div24").addClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/jiehun/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/jiehun/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/jiehun/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/jiehun/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/jiehun/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/jiehun/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/jiehun/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/jiehun/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/jiehun/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/jiehun/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/jiehun/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/jiehun/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/jiehun/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/jiehun/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/jiehun/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/jiehun/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/jiehun/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/jiehun/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/xingxiang/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/xingxiang/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/xingxiang/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/xingxiang/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/xingxiang/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/xingxiang/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/xingxiang/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/xingxiang/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/xingxiang/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/xingxiang/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/xingxiang/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/xingxiang/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/xingxiang/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/xingxiang/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/xingxiang/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/xingxiang/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/xingxiang/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/xingxiang/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/xingxiang/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/xingxiang/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/xingxiang/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/xingxiang/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/xingxiang/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/xingxiang/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/xingxiang/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/xingxiang/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/xingxiang/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/xingxiang/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/xingxiang/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/xingxiang/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/xingxiang/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/xingxiang/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/xingxiang/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/xingxiang/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/xingxiang/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/xingxiang/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/xingxiang/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/xingxiang/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/xingxiang/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/xingxiang/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/xingxiang/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/xingxiang/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/xingxiang/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/xingxiang/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/xingxiang/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/xingxiang/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/xingxiang/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/xingxiang/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/xingxiang/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/xingxiang/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/xingxiang/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/xingxiang/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/xingxiang/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/xingxiang/72.jpg");
 				$("#tukudiv3").addClass('tukudiv_active');
 				$("#tukudiv3").removeClass('tukudiv');
 				$("#tukuhr3").addClass('tukuhr_active');
@@ -946,6 +1280,105 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 				$("#tukuhr6").removeClass('tukuhr_active');
 			}
 						function tuku4(){
+				
+							
+				$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").addClass('mydiv3');
+				$("#pic_div5").addClass('mydiv3');
+				$("#pic_div6").addClass('mydiv3');
+				$("#pic_div7").addClass('mydiv3');
+				$("#pic_div8").addClass('mydiv3');
+				$("#pic_div9").addClass('mydiv3');
+				$("#pic_div10").addClass('mydiv3');
+				$("#pic_div11").addClass('mydiv3');
+				$("#pic_div12").addClass('mydiv3');
+				$("#pic_div13").addClass('mydiv3');
+				$("#pic_div14").addClass('mydiv3');
+				$("#pic_div15").addClass('mydiv3');
+				$("#pic_div16").addClass('mydiv3');
+				$("#pic_div17").addClass('mydiv3');
+				$("#pic_div18").addClass('mydiv3');
+				$("#pic_div19").addClass('mydiv3');
+				$("#pic_div20").addClass('mydiv3');
+				$("#pic_div21").addClass('mydiv3');
+				$("#pic_div22").addClass('mydiv3');
+				$("#pic_div23").addClass('mydiv3');
+				$("#pic_div24").addClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/tuandui/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/tuandui/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/tuandui/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/tuandui/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/tuandui/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/tuandui/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/tuandui/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/tuandui/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/tuandui/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/touxiang/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/quanjia/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/zhengjian/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/quanjia/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/quanjia/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/quanjia/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/quanjia/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/quanjia/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/quanjia/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/xingxiang/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/xingxiang/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/xingxiang/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/xingxiang/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/xingxiang/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/xingxiang/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/xingxiang/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/xingxiang/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/xingxiang/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/xingxiang/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/xingxiang/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/xingxiang/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/xingxiang/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/xingxiang/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/xingxiang/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/xingxiang/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/xingxiang/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/xingxiang/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/xingxiang/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/xingxiang/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/xingxiang/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/xingxiang/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/xingxiang/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/xingxiang/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/xingxiang/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/xingxiang/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/xingxiang/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/xingxiang/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/xingxiang/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/xingxiang/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/xingxiang/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/xingxiang/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/xingxiang/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/xingxiang/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/xingxiang/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/xingxiang/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/xingxiang/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/xingxiang/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/xingxiang/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/xingxiang/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/xingxiang/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/xingxiang/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/xingxiang/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/xingxiang/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/xingxiang/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/xingxiang/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/xingxiang/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/xingxiang/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/xingxiang/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/xingxiang/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/xingxiang/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/xingxiang/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/xingxiang/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/xingxiang/72.jpg");
+				
 				$("#tukudiv4").addClass('tukudiv_active');
 				$("#tukudiv4").removeClass('tukudiv');
 				$("#tukuhr4").addClass('tukuhr_active');
@@ -972,6 +1405,104 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 				$("#tukuhr6").removeClass('tukuhr_active');
 			}
 						function tuku5(){
+						
+										$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").removeClass('mydiv3');
+				$("#pic_div5").addClass('mydiv3');
+				$("#pic_div6").addClass('mydiv3');
+				$("#pic_div7").addClass('mydiv3');
+				$("#pic_div8").addClass('mydiv3');
+				$("#pic_div9").addClass('mydiv3');
+				$("#pic_div10").addClass('mydiv3');
+				$("#pic_div11").addClass('mydiv3');
+				$("#pic_div12").addClass('mydiv3');
+				$("#pic_div13").addClass('mydiv3');
+				$("#pic_div14").addClass('mydiv3');
+				$("#pic_div15").addClass('mydiv3');
+				$("#pic_div16").addClass('mydiv3');
+				$("#pic_div17").addClass('mydiv3');
+				$("#pic_div18").addClass('mydiv3');
+				$("#pic_div19").addClass('mydiv3');
+				$("#pic_div20").addClass('mydiv3');
+				$("#pic_div21").addClass('mydiv3');
+				$("#pic_div22").addClass('mydiv3');
+				$("#pic_div23").addClass('mydiv3');
+				$("#pic_div24").addClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/quanjia/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/quanjia/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/quanjia/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/quanjia/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/quanjia/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/quanjia/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/quanjia/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/quanjia/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/quanjia/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/quanjia/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/quanjia/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/zhengjian/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/quanjia/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/quanjia/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/quanjia/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/quanjia/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/quanjia/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/quanjia/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/xingxiang/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/xingxiang/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/xingxiang/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/xingxiang/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/xingxiang/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/xingxiang/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/xingxiang/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/xingxiang/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/xingxiang/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/xingxiang/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/xingxiang/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/xingxiang/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/xingxiang/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/xingxiang/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/xingxiang/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/xingxiang/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/xingxiang/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/xingxiang/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/xingxiang/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/xingxiang/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/xingxiang/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/xingxiang/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/xingxiang/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/xingxiang/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/xingxiang/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/xingxiang/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/xingxiang/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/xingxiang/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/xingxiang/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/xingxiang/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/xingxiang/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/xingxiang/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/xingxiang/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/xingxiang/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/xingxiang/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/xingxiang/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/xingxiang/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/xingxiang/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/xingxiang/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/xingxiang/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/xingxiang/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/xingxiang/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/xingxiang/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/xingxiang/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/xingxiang/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/xingxiang/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/xingxiang/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/xingxiang/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/xingxiang/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/xingxiang/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/xingxiang/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/xingxiang/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/xingxiang/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/xingxiang/72.jpg");
+						
 				$("#tukudiv5").addClass('tukudiv_active');
 				$("#tukudiv5").removeClass('tukudiv');
 				$("#tukuhr5").addClass('tukuhr_active');
@@ -998,6 +1529,104 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 				$("#tukuhr6").removeClass('tukuhr_active');
 			}
 						function tuku6(){
+						
+				$("#pic_div1").removeClass('mydiv3');
+				$("#pic_div2").removeClass('mydiv3');
+				$("#pic_div3").removeClass('mydiv3');
+				$("#pic_div4").removeClass('mydiv3');
+				$("#pic_div5").addClass('mydiv3');
+				$("#pic_div6").addClass('mydiv3');
+				$("#pic_div7").addClass('mydiv3');
+				$("#pic_div8").addClass('mydiv3');
+				$("#pic_div9").addClass('mydiv3');
+				$("#pic_div10").addClass('mydiv3');
+				$("#pic_div11").addClass('mydiv3');
+				$("#pic_div12").addClass('mydiv3');
+				$("#pic_div13").addClass('mydiv3');
+				$("#pic_div14").addClass('mydiv3');
+				$("#pic_div15").addClass('mydiv3');
+				$("#pic_div16").addClass('mydiv3');
+				$("#pic_div17").addClass('mydiv3');
+				$("#pic_div18").addClass('mydiv3');
+				$("#pic_div19").addClass('mydiv3');
+				$("#pic_div20").addClass('mydiv3');
+				$("#pic_div21").addClass('mydiv3');
+				$("#pic_div22").addClass('mydiv3');
+				$("#pic_div23").addClass('mydiv3');
+				$("#pic_div24").addClass('mydiv3');
+				$("#tuku_pic1").attr('src',"img/tuku/touxiang/1.jpg");
+				$("#tuku_pic2").attr('src',"img/tuku/touxiang/2.jpg");
+				$("#tuku_pic3").attr('src',"img/tuku/touxiang/3.jpg");
+				$("#tuku_pic4").attr('src',"img/tuku/touxiang/4.jpg");
+				$("#tuku_pic5").attr('src',"img/tuku/touxiang/5.jpg");
+				$("#tuku_pic6").attr('src',"img/tuku/touxiang/6.jpg");
+				$("#tuku_pic7").attr('src',"img/tuku/touxiang/7.jpg");
+				$("#tuku_pic8").attr('src',"img/tuku/touxiang/8.jpg");
+				$("#tuku_pic9").attr('src',"img/tuku/touxiang/9.jpg");
+				$("#tuku_pic10").attr('src',"img/tuku/touxiang/10.jpg");
+				$("#tuku_pic11").attr('src',"img/tuku/quanjia/11.jpg");
+				$("#tuku_pic12").attr('src',"img/tuku/zhengjian/12.jpg");
+				$("#tuku_pic13").attr('src',"img/tuku/quanjia/13.jpg");
+				$("#tuku_pic14").attr('src',"img/tuku/quanjia/14.jpg");
+				$("#tuku_pic15").attr('src',"img/tuku/quanjia/15.jpg");
+				$("#tuku_pic16").attr('src',"img/tuku/quanjia/16.jpg");
+				$("#tuku_pic17").attr('src',"img/tuku/quanjia/17.jpg");
+				$("#tuku_pic18").attr('src',"img/tuku/quanjia/18.jpg");
+				$("#tuku_pic19").attr('src',"img/tuku/xingxiang/19.jpg");
+				$("#tuku_pic20").attr('src',"img/tuku/xingxiang/20.jpg");
+				$("#tuku_pic21").attr('src',"img/tuku/xingxiang/21.jpg");
+				$("#tuku_pic22").attr('src',"img/tuku/xingxiang/22.jpg");
+				$("#tuku_pic23").attr('src',"img/tuku/xingxiang/23.jpg");
+				$("#tuku_pic24").attr('src',"img/tuku/xingxiang/24.jpg");
+				$("#tuku_pic25").attr('src',"img/tuku/xingxiang/25.jpg");
+				$("#tuku_pic26").attr('src',"img/tuku/xingxiang/26.jpg");
+				$("#tuku_pic27").attr('src',"img/tuku/xingxiang/27.jpg");
+				$("#tuku_pic28").attr('src',"img/tuku/xingxiang/28.jpg");
+				$("#tuku_pic29").attr('src',"img/tuku/xingxiang/29.jpg");
+				$("#tuku_pic30").attr('src',"img/tuku/xingxiang/30.jpg");
+				$("#tuku_pic31").attr('src',"img/tuku/xingxiang/31.jpg");
+				$("#tuku_pic32").attr('src',"img/tuku/xingxiang/32.jpg");
+				$("#tuku_pic33").attr('src',"img/tuku/xingxiang/33.jpg");
+				$("#tuku_pic34").attr('src',"img/tuku/xingxiang/34.jpg");
+				$("#tuku_pic35").attr('src',"img/tuku/xingxiang/35.jpg");
+				$("#tuku_pic36").attr('src',"img/tuku/xingxiang/36.jpg");
+				$("#tuku_pic37").attr('src',"img/tuku/xingxiang/37.jpg");
+				$("#tuku_pic38").attr('src',"img/tuku/xingxiang/38.jpg");
+				$("#tuku_pic39").attr('src',"img/tuku/xingxiang/39.jpg");
+				$("#tuku_pic40").attr('src',"img/tuku/xingxiang/40.jpg");
+				$("#tuku_pic41").attr('src',"img/tuku/xingxiang/41.jpg");
+				$("#tuku_pic42").attr('src',"img/tuku/xingxiang/42.jpg");
+				$("#tuku_pic43").attr('src',"img/tuku/xingxiang/43.jpg");
+				$("#tuku_pic44").attr('src',"img/tuku/xingxiang/44.jpg");
+				$("#tuku_pic45").attr('src',"img/tuku/xingxiang/45.jpg");
+				$("#tuku_pic46").attr('src',"img/tuku/xingxiang/46.jpg");
+				$("#tuku_pic47").attr('src',"img/tuku/xingxiang/47.jpg");
+				$("#tuku_pic48").attr('src',"img/tuku/xingxiang/48.jpg");
+				$("#tuku_pic49").attr('src',"img/tuku/xingxiang/49.jpg");
+				$("#tuku_pic50").attr('src',"img/tuku/xingxiang/50.jpg");
+				$("#tuku_pic51").attr('src',"img/tuku/xingxiang/51.jpg");
+				$("#tuku_pic52").attr('src',"img/tuku/xingxiang/52.jpg");
+				$("#tuku_pic53").attr('src',"img/tuku/xingxiang/53.jpg");
+				$("#tuku_pic54").attr('src',"img/tuku/xingxiang/54.jpg");
+				$("#tuku_pic55").attr('src',"img/tuku/xingxiang/55.jpg");
+				$("#tuku_pic56").attr('src',"img/tuku/xingxiang/56.jpg");
+				$("#tuku_pic57").attr('src',"img/tuku/xingxiang/57.jpg");
+				$("#tuku_pic58").attr('src',"img/tuku/xingxiang/58.jpg");
+				$("#tuku_pic59").attr('src',"img/tuku/xingxiang/59.jpg");
+				$("#tuku_pic60").attr('src',"img/tuku/xingxiang/60.jpg");
+				$("#tuku_pic61").attr('src',"img/tuku/xingxiang/61.jpg");
+				$("#tuku_pic62").attr('src',"img/tuku/xingxiang/62.jpg");
+				$("#tuku_pic63").attr('src',"img/tuku/xingxiang/63.jpg");
+				$("#tuku_pic64").attr('src',"img/tuku/xingxiang/64.jpg");
+				$("#tuku_pic65").attr('src',"img/tuku/xingxiang/65.jpg");
+				$("#tuku_pic66").attr('src',"img/tuku/xingxiang/66.jpg");
+				$("#tuku_pic67").attr('src',"img/tuku/xingxiang/67.jpg");
+				$("#tuku_pic68").attr('src',"img/tuku/xingxiang/68.jpg");
+				$("#tuku_pic69").attr('src',"img/tuku/xingxiang/69.jpg");
+				$("#tuku_pic70").attr('src',"img/tuku/xingxiang/70.jpg");
+				$("#tuku_pic71").attr('src',"img/tuku/xingxiang/71.jpg");
+				$("#tuku_pic72").attr('src',"img/tuku/xingxiang/72.jpg");
+						
 				$("#tukudiv6").addClass('tukudiv_active');
 				$("#tukudiv6").removeClass('tukudiv');
 				$("#tukuhr6").addClass('tukuhr_active');
@@ -1069,76 +1698,148 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 
 						
 							<div id="zhengjian" align="center" class="swiper-wrapper sdsd" style="margin-left: 50px;margin-top: 20px; transition: 0s; transform: translate3d(0px, 0px, 0px); width: 1256px; height: 600px;">
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/1.jpg " id="tuku_pic1" style="height:150px;margin-bottom:20px;" onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/1.jpg')"></br>
-									  <img src="img/tuku/zhengjian/2.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/2.jpg')"></br>
-										<img src="img/tuku/zhengjian/3.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/3.jpg')">
+									<div id="pic_div1" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/1.jpg " id="tuku_pic1" style="height:150px;margin-bottom:20px;" onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/2.jpg" id="tuku_pic2"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/3.jpg" id="tuku_pic3"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/4.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/4.jpg')"></br>
-									  <img src="img/tuku/zhengjian/4.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/5.jpg')"></br>
-										<img src="img/tuku/zhengjian/5.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/6.jpg')">
+									<div id="pic_div2" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/4.jpg " id="tuku_pic4"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/4.jpg"  id="tuku_pic5" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/5.jpg"  id="tuku_pic6" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/7.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/7.jpg')"></br>
-									  <img src="img/tuku/zhengjian/8.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/8.jpg')"></br>
-										<img src="img/tuku/zhengjian/9.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/9.jpg')">
+									<div id="pic_div3" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/7.jpg " id="tuku_pic7"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/8.jpg"  id="tuku_pic8" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/9.jpg" id="tuku_pic9"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/10.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/10.jpg')"></br>
-									  <img src="img/tuku/zhengjian/11.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/11.jpg')"></br>
-										<img src="img/tuku/zhengjian/12.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/12.jpg')">
+									<div id="pic_div4" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/10.jpg "  id="tuku_pic10" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/11.jpg"  id="tuku_pic11" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/12.jpg" id="tuku_pic12"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/13.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/13.jpg')"></br>
-									  <img src="img/tuku/zhengjian/14.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/14.jpg')"></br>
-										<img src="img/tuku/zhengjian/15.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/15.jpg')">
+									<div id="pic_div5" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/13.jpg " id="tuku_pic13"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/14.jpg"  id="tuku_pic14" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/15.jpg"  id="tuku_pic15" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/16.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/16.jpg')"></br>
-									  <img src="img/tuku/zhengjian/17.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/17.jpg')"></br>
-										<img src="img/tuku/zhengjian/18.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/18.jpg')">
+									<div id="pic_div6" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/16.jpg " id="tuku_pic16"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/17.jpg" id="tuku_pic17"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/18.jpg" id="tuku_pic18"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/19.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/19.jpg')"></br>
-									  <img src="img/tuku/zhengjian/20.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/20.jpg')"></br>
-										<img src="img/tuku/zhengjian/21.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/21.jpg')">
+									<div id="pic_div7" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/19.jpg "  id="tuku_pic19" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/20.jpg"  id="tuku_pic20" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/21.jpg"  id="tuku_pic21" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/22.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/22.jpg')"></br>
-									  <img src="img/tuku/zhengjian/23.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/23.jpg')"></br>
-										<img src="img/tuku/zhengjian/24.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/24.jpg')">
+									<div id="pic_div8" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/22.jpg " id="tuku_pic22"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/23.jpg"  id="tuku_pic23" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/24.jpg"  id="tuku_pic24" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/25.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/25.jpg')"></br>
-									  <img src="img/tuku/zhengjian/26.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/26.jpg')"></br>
-										<img src="img/tuku/zhengjian/27.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/27.jpg')">
+									<div id="pic_div9" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/25.jpg "  id="tuku_pic25" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/26.jpg"  id="tuku_pic26" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/27.jpg"  id="tuku_pic27" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/28.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/28.jpg')"></br>
-									  <img src="img/tuku/zhengjian/29.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/29.jpg')"></br>
-										<img src="img/tuku/zhengjian/30.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/30.jpg')">
+									<div id="pic_div10" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/28.jpg "  id="tuku_pic28" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/29.jpg"  id="tuku_pic29" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/30.jpg"  id="tuku_pic30" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/31.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/31.jpg')"></br>
-									  <img src="img/tuku/zhengjian/32.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/32.jpg')"></br>
-										<img src="img/tuku/zhengjian/33.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/33.jpg')">
+									<div id="pic_div11" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/31.jpg "  id="tuku_pic31" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/32.jpg"  id="tuku_pic32" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/33.jpg"  id="tuku_pic33" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
-									<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
-									  <div class="inner"> <img src="img/tuku/zhengjian/34.jpg " style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/34.jpg')"></br>
-									  <img src="img/tuku/zhengjian/35.jpg" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/35.jpg')"></br>
-										<img src="img/tuku/zhengjian/36.jpg" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/36.jpg')">
+									<div id="pic_div12" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/34.jpg "  id="tuku_pic34" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/35.jpg"  id="tuku_pic35" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/36.jpg"  id="tuku_pic36" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div13" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/37.jpg " id="tuku_pic37"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/38.jpg" id="tuku_pic38"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/39.jpg" id="tuku_pic39"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div14" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/40.jpg "  id="tuku_pic40" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/41.jpg"  id="tuku_pic41" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/42.jpg"  id="tuku_pic42" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div15" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/43.jpg "  id="tuku_pic43" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/44.jpg" id="tuku_pic44"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/45.jpg" id="tuku_pic45"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div16" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/46.jpg "  id="tuku_pic46" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/47.jpg" id="tuku_pic47"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/48.jpg" id="tuku_pic48"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div17" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/49.jpg "  id="tuku_pic49" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/50.jpg"  id="tuku_pic50" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/51.jpg" id="tuku_pic51"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div18" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/52.jpg " id="tuku_pic52"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/53.jpg"  id="tuku_pic53" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/54.jpg" id="tuku_pic54"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp('img/tuku/zhengjian/36.jpg')">
+									  </div>
+									</div>
+									<div id="pic_div19" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/55.jpg " id="tuku_pic55"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/56.jpg"  id="tuku_pic56" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/57.jpg" id="tuku_pic57"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div20" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/58.jpg " id="tuku_pic58"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/59.jpg"  id="tuku_pic59" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/60.jpg"  id="tuku_pic60" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div21" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/61.jpg "  id="tuku_pic61" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/62.jpg" id="tuku_pic62"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/63.jpg"  id="tuku_pic63" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div22" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/64.jpg " id="tuku_pic64"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/65.jpg" id="tuku_pic65"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/66.jpg"  id="tuku_pic66" style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div23" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/67.jpg " id="tuku_pic67"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/68.jpg" id="tuku_pic68"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/69.jpg" id="tuku_pic69"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
+									  </div>
+									</div>
+									<div id="pic_div24" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width:164px;">
+									  <div class="inner"> <img src="img/tuku/zhengjian/70.jpg " id="tuku_pic70"  style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+									  <img src="img/tuku/zhengjian/71.jpg"  id="tuku_pic71" style="height:150px;margin-bottom:20px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)"></br>
+										<img src="img/tuku/zhengjian/72.jpg" id="tuku_pic72"  style="height:150px;"  onmousedown="mousePress()" onmouseup="mouseUp(this)">
 									  </div>
 									</div>
 								

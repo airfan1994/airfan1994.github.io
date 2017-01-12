@@ -41,8 +41,22 @@
 				function stro4(){ $("html,body").animate({scrollTop: $("#part4").offset().top-90}, 666);
 				}
 				function stro5(){ $("html,body").animate({scrollTop: $("#footer").offset().top-50}, 666);
+							$(document).ready(function(){ 
+		
+}); 
 				}
 			</script>
+			
+			<script type="text/javascript"> 
+
+window.onload=function(){ 
+	var window_width1 = $(window).width();
+$('#navimg').css({height:parseInt(window_width1*0.3607)-14});
+			$('.banner ul li').css({width:window_width1});
+			$('.banner ul li').css({height:window_width1*0.3607});
+} 
+
+</script>
 				<!-- <div id="navpart" style="height:91px;min-width:1200px;width:100%;overflow-x:auto;overflow-y:hidden;"> -->
 					<!-- <img src="img/logo3.jpg" height="91" width="174" style="margin-left:40px;"/> -->
 					<!-- <a style="font-family:'华文细黑';font-size: 120%;margin-left:20px;margin-top:25px;" onclick="stro0()" >首页</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
@@ -220,7 +234,7 @@
 				<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
 			</div>
 				
-			<script type="text/javascript">
+			<script type="text/javascript">	
 			var window_width = $(window).width();
 		var images_height = String(parseInt(window_width*0.3607))+'px';
 		//图片路径/链接(数组形式):
@@ -442,16 +456,16 @@
 				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">微笑时刻，成立于2015年，主要提供各类证件照、棚拍形象照、棚拍轻写真，发展至今，在北京、天津拥有多家门店，营业面积超过1600㎡，平均每天接待客户600+人；</p>
 				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">我们以现代化的呈现形式，但仍保有老一代人的匠心，勤勤恳恳为大家提供优质照片，在互联网的快速传播下，微笑时刻得以蓬勃发展，我们怀着一颗感恩的心，对待用户，在保证品质的前提下，我们会一步步走到中国的每一座城市，希望把微笑的生活态度传递给每一位年轻人。
 				<p style="font-family:'华文细黑';font-size: 16px;margin-bottom:10px;">发现美，创造美，传递一种生活态度。</br>
-				
-				
-				<div class = "row">
-					<div class="col-xs-6 col-md-6" align="center" style ="min-width:0px;">
-						<img src = "img/aa.jpg" style="margin-top:10px;width:60%;max-width:200px;margin-left:0px;">
-					</div>
-					<div class="col-xs-6 col-md-6" align="center" style ="min-width:0px;">
-					  <img src = "img/sina.jpg" style="margin-top:10px;width:60%;max-width:200px;" >
-					</div>
-				</div>
+				<img src = "img/aa.jpg" style="margin-top:50px;width:15%;max-width:200px;">
+				<img src = "img/sina.jpg" style="margin-top:50px;width:15%;max-width:200px;margin-left:30%;" >
+				<!-- <div class = "row"> -->
+					<!-- <div class="col-xs-6 col-md-6" align="center" style ="min-width:0px;"> -->
+						<!-- <img src = "img/aa.jpg" style="margin-top:10px;width:60%;max-width:200px;margin-left:0px;"> -->
+					<!-- </div> -->
+					<!-- <div class="col-xs-6 col-md-6" align="center" style ="min-width:0px;"> -->
+					  <!-- <img src = "img/sina.jpg" style="margin-top:10px;width:60%;max-width:200px;" > -->
+					<!-- </div> -->
+				<!-- </div> -->
 				
 			  </div>
 			  <div class="col-xs-1 col-md-1"  style="height:100%;">
@@ -635,7 +649,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-zhengjian.jpg' height='400' width='800' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-zhengjian.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro1').addClass('val_yellow');
@@ -661,7 +675,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-xingxiang.jpg' height='400' width='857' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-xingxiang.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro2').addClass('val_yellow');
@@ -687,7 +701,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-tuandui.jpg' height='400' width='809' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-tuandui.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro3').addClass('val_yellow');
@@ -713,7 +727,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-jiehun.jpg' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-jiehun.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro4').addClass('val_yellow');
@@ -739,7 +753,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-shejiao.jpg' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-shejiao.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro5').addClass('val_yellow');
@@ -765,7 +779,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
 						setTimeout(function(){  //500毫秒后执行此方法
 							$(".center img").remove(); //删除图片
-							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-quanjia.jpg' height='400' width='603' style='margin-bottom:0;vertical-align:bottom' >";
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-quanjia.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
 							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
 						},500);
 						$('#intro6').addClass('val_yellow');
@@ -994,7 +1008,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 		}
 		</script>
 		
-		<div id="part4" class="row" style="padding:26px 0px 16px 0px;min-width:1200px;">
+		<div id="part4" class="row" style="padding:66px 0px 16px 0px;min-width:1200px;">
 		
 			  <div class="col-xs-2 col-md-2" ></div>
 			  <div class="col-xs-4 col-md-4" style="min-height:475px;">
@@ -1149,17 +1163,17 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 				<form action="#" method="get">
 					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
 						<input type="text" name="email" style="height:42px;margin-right:5%;width:36%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
 						<input type="text" style="height:42px;width:36%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
 					</div>
 					<div style="width:90%">
 						<input type="text" style="height:142px;width:77%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
 					</div>
 					<div style="width:90%">
 						<input type="submit" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
-border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
 					</div>
 					
 					<div style="width:90%">
@@ -1216,9 +1230,7 @@ border-width:2px;border-color:#A0A0A0;font-size:18px;color:#FFFFFF;background-co
 
 			<a href="mailto:test@163.com;test1@163.com?CC=test@163.com&BCC=test@163.com&Subject=Hello&Body=你好">给我发邮件</a> -->
 		</div>
-		<div id="bottom" align="center">
-			<p>版权所有：微笑时刻    京ICP备140106629号 Copyright 2010-2016 www.smile-time.cn All Rights Reserved.
-		</div>
+
 	<!--分割线
 	
 -->

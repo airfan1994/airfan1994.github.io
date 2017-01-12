@@ -136,14 +136,14 @@ margin-right:auto;
 }
 */
 .val_yellow{
-	color:#f6ca38;
+	color:#1fbbd4;
 }
 .val_yellow1{
 	background-color: black;
 	height: 1px;
 }
 .val_yellow2{
-	background-color:#f6ca38; 
+	background-color:#1fbbd4; 
 	height: 3px;
 }
 .mydiv6{
@@ -251,14 +251,14 @@ opacity: .5;
 	margin: 0;
 	padding: 0;
 	width:100%;
-	height:540px;
+	height:570px;
 }
 #part3 {
 	/* background-color; */
 	margin: 0;
 	padding: 0;
 	width:100%;
-	height:700px;
+	height:640px;
 }
 #part4 {
 	/* background-color; */
@@ -280,5 +280,9 @@ opacity: .5;
 	padding: 0;
 	width:100%;
 	height:40px;
+}
+li{
+background-size:100%;
+background-repeat: no-repeat;	
 }
 </style>

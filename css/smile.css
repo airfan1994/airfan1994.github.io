@@ -157,6 +157,9 @@ box-shadow:0px 0px 12px #909090; */
 	border-color:#F0F0F0;
 	border-top-style:none;
 }
+.mydiv18{
+font-family:"微软雅黑";
+}
 .mydiv{
 /* width:250px;height:auto;border:#909090 1px solid;background:#fff;color:#333; */
 filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);

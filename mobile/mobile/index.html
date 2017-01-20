@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<title>微笑时刻</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/smile.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/idangerous.swiper.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/gallery-app.css">
+		<link rel="stylesheet" href="css/article.css" media="all">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/idangerous.swiper-2.0.min.js"></script> 
+		<script src="js/nativeShare.js"></script>
+		<script src="js/gallery-app.js"></script> 
+		<!-- <script src="js/jquery.js"></script>  -->
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GQIfBgSoxpM2YEXp8twKBn7Iq2tnM8WP&s=1"></script> 
+		<link rel="stylesheet" href="css/jquery.zySlide.css">
+    <link rel="stylesheet" href="css/nativeShare.css"/>
+	    <link rel="stylesheet" href="css/animate.min.css"/>
+	<link rel="shortcut icon" href="http://www.smile-time.cn/wp-content/themes/bootstrap/favicon.ico">
+	</head>
+	<body style="background-color: #FFFFFF;">
+	
+		<script type="text/javascript">
+			
+		window.onload=function(){ 
+			var window_width1 = $(window).width();
+		$('#navimg').css({height:parseInt(window_width1*0.3607)-14});
+					$('.banner ul li').css({width:window_width1});
+					$('.banner ul li').css({height:window_width1*0.3607});
+		} 
+		</script>
+		<div id = "part1">
+			<div id="up1" align = "center">
+				<img src="img/logo3.jpg" height="91" width="174"/>
+			</div>
+			<div id="up2" class = "row">
+				<div id = "up2-left" class="col-xs-6 col-md-6" align="center">
+					<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">010-59436010</p>
+				</div>
+				<div id = "up2-right" class="col-xs-6 col-md-6" align="center">
+					<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">微信马上预约</p>
+				</div>
+				<div id = "up-banner" class = "row">
+					<div id = "up-banner1" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">首页</p>
+					</div>
+					<div id = "up-banner2" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">关于我们</p>
+					</div>
+					<div id = "up-banner3" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">服务流程</p>
+					</div>
+					<div id = "up-banner4" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">客片欣赏</p>
+					</div>
+					<div id = "up-banner5" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">店铺信息</p>
+					</div>
+					<div id = "up-banner6" class="col-xs-2 col-md-2" align="center">
+						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">联系我们</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="navimg" class="banner" style="width:100%;">
+				<ul></ul>
+				<ol></ol>
+				<i class="left"></i><i class="right"></i>
+				<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+		</div>
+		<script type="text/javascript">	
+			var window_width = $(window).width();
+		var images_height = String(parseInt(window_width*0.36071))+'px';
+		//图片路径/链接(数组形式):
+		var images_url1 = [
+			'img/bannera6.jpg',
+			'img/bannerb6.jpg',
+			'img/bannerc6.jpg'
+		];
+		var images_count = images_url1.length;
+		//console.log(images_count);
+
+		//创建节点
+		//图片列表节点
+		for(var j=0;j<images_count+1;j++){
+			$('.banner ul').append('<li style="background-size:100% 100%;"></li>');
+			//alert(0);
+		}
+		//轮播圆点按钮节点
+		for(var j=0;j<images_count;j++){
+			if(j==0){
+				$('.banner ol').append('<li class="current"></li>')
+			}else{
+				$('.banner ol').append('<li></li>')
+			}
+		}
+
+		//载入图片
+		$('.banner ul li').css('background-image','url('+images_url1[0]+')');
+		$.each(images_url1,function(key,value){
+			$('.banner ul li').eq(key).css('background-image','url('+value+')');
+		});
+
+		$('.banner').css('height',images_height);
+
+		$('.banner ul').css('width',(images_count+1)*100+'%');
+
+		$('.banner ol').css('width',images_count*30+'px');
+		$('.banner ol').css('margin-left',-images_count*20*0.5-10+'px');
+
+		//=========================
+
+		var num = 0;
+		//获取窗口宽度
+		var window_width = $(window).width();
+		$(window).resize(function(){
+			$('#navimg').css({height:parseInt(window_width*0.3607)-10});
+			window_width = $(window).width();
+			$('.banner ul li').css({width:window_width});
+			$('.banner ul li').css({height:window_width*0.3607});
+			clearInterval(timer);
+			nextPlay();
+			timer = setInterval(nextPlay,4000);
+		});
+		//console.log(window_width);
+		$('.banner ul li').width(window_width);
+		//轮播圆点
+		$('.banner ol li').mouseover(function(){//用hover的话会有两个事件(鼠标进入和离开)
+			$(this).addClass('current').siblings().removeClass('current');
+			//第一张图： 0 * window_width
+			//第二张图： 1 * window_width
+			//第三张图： 2 * window_width
+			//获取当前编号
+			var i = $(this).index();
+			//console.log(i);
+			$('.banner ul').stop().animate({left:-i*window_width},2000);
+			num = i;
+		});
+		//自动播放
+		var timer = null;
+		function prevPlay(){
+			num--;
+			if(num<0){
+				//悄悄把图片跳到最后一张图(复制页,与第一张图相同),然后做出图片播放动画，left参数是定位而不是移动的长度
+				$('.banner ul').css({left:-window_width*images_count}).stop().animate({left:-window_width*(images_count-1)},1000);
+				num=images_count-1;
+			}else{
+				//console.log(num);
+				$('.banner ul').stop().animate({left:-num*window_width},1000);
+			}
+			if(num==images_count-1){
+				$('.banner ol li').eq(images_count-1).addClass('current').siblings().removeClass('current');
+			}else{
+				$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+
+			}
+		}
+		function nextPlay(){
+			num++;
+			/*if(num>images_count){
+				//播放到最后一张(复制页)后,悄悄地把图片跳到第一张,因为和第一张相同,所以难以发觉,
+				$('.banner ul').css({left:0}).stop().animate({left:-window_width},300);
+				//css({left:0})是直接悄悄改变位置，animate({left:-window_width},500)是做出移动动画
+				//随后要把指针指向第二张图片,表示已经播放至第二张了。
+				num=1;
+			}else{
+				//在最后面加入一张和第一张相同的图片，如果播放到最后一张，继续往下播，悄悄回到第一张(肉眼看不见)，从第一张播放到第二张
+				//console.log(num);
+				$('.banner ul').stop().animate({left:-num*window_width},1000);
+			}*/
+			if(num==images_count)
+				num=0;
+			$('.banner ul').stop().animate({left:-num*window_width},1000);
+			$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			//if(num==images_count){
+			//	$('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
+			//}else{
+				//$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+
+			//}
+		}
+		timer = setInterval(nextPlay,4000);
+		//鼠标经过banner，停止定时器,离开则继续播放
+		$('.banner').mouseenter(function(){
+			clearInterval(timer);
+			//左右箭头显示(淡入)
+			$('.banner i').fadeIn();
+		}).mouseleave(function(){
+			timer = setInterval(nextPlay,4000);
+			//左右箭头隐藏(淡出)
+			$('.banner i').fadeOut();
+		});
+		//播放下一张
+		$('.banner .right').click(function(){
+			nextPlay();
+		});
+		//返回上一张
+		$('.banner .left').click(function(){
+			prevPlay();
+		});
+		</script>
+		
+		<div id="part2" align="center" style="width:100%">
+			<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">关于我们</p>
+			<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:10px;">微笑时刻，成立于2015年，主要提供各类证件照、棚拍形象照、棚拍轻写真，发展至今，在北京、天津拥有多家门店，营业面积超过1600㎡，平均每天接待客户600+人；</p>
+			<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:10px;">我们以现代化的呈现形式，但仍保有老一代人的匠心，勤勤恳恳为大家提供优质照片，在互联网的快速传播下，微笑时刻得以蓬勃发展，我们怀着一颗感恩的心，对待用户，在保证品质的前提下，我们会一步步走到中国的每一座城市，希望把微笑的生活态度传递给每一位年轻人。
+			<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:10px;">发现美，创造美，传递一种生活态度。</br>
+			<img src = "img/wx.jpg" style="margin-top:50px;width:18%;max-width:200px;">
+			<img src = "img/sina.jpg" style="margin-top:50px;width:18%;max-width:200px;margin-left:15%;" >
+			<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+		<div>
+			
+		<div id = "part3" align = "center" style = "width:100%">
+			<p style="font-family:'微软雅黑';font-size: 300%;margin-top:30px;margin-bottom:20px;">服务流程
+			<div id = "uptwo">
+				<div class="col-xs-6 col-md-6" align="center">
+						<div  id ="sgd1" align="center" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px;; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover1()" onmouseleave="mouseout1()">
+							<img  src="img/预约5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/预约字.jpg" style="margin-top:10px;margin-bottom:10px;width:100%;">
+						</div>
+				</div>
+				<div class="col-xs-6 col-md-6" align="center" >
+						<div id ="sgd2" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px;; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover2()" onmouseleave="mouseout2()">
+							<img  src="img/到店5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/到店字.jpg" style="margin-top:10px;margin-bottom:10px;width:100%;">
+						</div>
+				</div>
+			</div>
+			<div id = "middletwo">
+				<div class="col-xs-6 col-md-6" align="center">
+						<div id ="sgd3" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px;; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover3()" onmouseleave="mouseout3()">
+							<img  src="img/造型5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/造型字.jpg" style="margin-top:10px;margin-bottom:10px;width:100%;">
+						</div>
+				</div>
+				<div class="col-xs-6 col-md-6" align="center" >
+
+						<div id ="sgd4" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px;; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover4()" onmouseleave="mouseout4()">
+							<img  src="img/拍摄5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/拍摄字.jpg" style="margin-top:10px;margin-bottom:10px;width:100%;">
+						</div>
+				</div>
+			</div>
+			<div id = "bottomtwo">
+				<div class="col-xs-6 col-md-6" align="center">
+						<div id ="sgd5" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px;; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover5()" onmouseleave="mouseout5()">
+							<img  src="img/后期5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/后期字.jpg" style="margin-top:10px;margin-bottom:10px;width:100%;">							
+						</div>
+				</div>
+				<div class="col-xs-6 col-md-6" align="center">
+						<div id ="sgd6" style="background-color:#FFFFFF;margin-top:10px;padding-bottom:10px; border-style:solid;
+border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onmouseover="mouseover6()" onmouseleave="mouseout6()">
+							<img  src="img/取照5.jpg" style="margin-top:10px;width:50%">
+							<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+							<img  src="img/取照字.jpg" style="width:100%;margin-top:10px;margin-bottom:10px;">	
+						</div>
+				</div>
+			</div>
+			<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+		</div>
+		
+		<div id="part4" align="center">
+				<script language = "javascript">
+					function x1(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-zhengjian.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro1').addClass('val_yellow');
+						$('#intro2').removeClass('val_yellow');
+						$('#intro3').removeClass('val_yellow');
+						$('#intro4').removeClass('val_yellow');
+						$('#intro5').removeClass('val_yellow');
+						$('#intro6').removeClass('val_yellow');
+						$('#hr1').addClass('val_yellow2');
+						$('#hr1').removeClass('val_yellow1');
+						$('#hr2').addClass('val_yellow1');
+						$('#hr2').removeClass('val_yellow2');
+						$('#hr3').addClass('val_yellow1');
+						$('#hr3').removeClass('val_yellow2');
+						$('#hr4').addClass('val_yellow1');
+						$('#hr4').removeClass('val_yellow2');
+						$('#hr5').addClass('val_yellow1');
+						$('#hr5').removeClass('val_yellow2');
+						$('#hr6').addClass('val_yellow1');
+						$('#hr6').removeClass('val_yellow2');
+					}
+					function x2(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-xingxiang.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro2').addClass('val_yellow');
+						$('#intro1').removeClass('val_yellow');
+						$('#intro3').removeClass('val_yellow');
+						$('#intro4').removeClass('val_yellow');
+						$('#intro5').removeClass('val_yellow');
+						$('#intro6').removeClass('val_yellow');
+						$('#hr2').addClass('val_yellow2');
+						$('#hr2').removeClass('val_yellow1');
+						$('#hr1').addClass('val_yellow1');
+						$('#hr1').removeClass('val_yellow2');
+						$('#hr3').addClass('val_yellow1');
+						$('#hr3').removeClass('val_yellow2');
+						$('#hr4').addClass('val_yellow1');
+						$('#hr4').removeClass('val_yellow2');
+						$('#hr5').addClass('val_yellow1');
+						$('#hr5').removeClass('val_yellow2');
+						$('#hr6').addClass('val_yellow1');
+						$('#hr6').removeClass('val_yellow2');
+					}
+					function x3(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-tuandui.jpg' style='width:90%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro3').addClass('val_yellow');
+						$('#intro2').removeClass('val_yellow');
+						$('#intro1').removeClass('val_yellow');
+						$('#intro4').removeClass('val_yellow');
+						$('#intro5').removeClass('val_yellow');
+						$('#intro6').removeClass('val_yellow');
+						$('#hr3').addClass('val_yellow2');
+						$('#hr3').removeClass('val_yellow1');
+						$('#hr2').addClass('val_yellow1');
+						$('#hr2').removeClass('val_yellow2');
+						$('#hr1').addClass('val_yellow1');
+						$('#hr1').removeClass('val_yellow2');
+						$('#hr4').addClass('val_yellow1');
+						$('#hr4').removeClass('val_yellow2');
+						$('#hr5').addClass('val_yellow1');
+						$('#hr5').removeClass('val_yellow2');
+						$('#hr6').addClass('val_yellow1');
+						$('#hr6').removeClass('val_yellow2');
+					}
+					function x4(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-jiehun.jpg' style='width:64%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro4').addClass('val_yellow');
+						$('#intro2').removeClass('val_yellow');
+						$('#intro3').removeClass('val_yellow');
+						$('#intro1').removeClass('val_yellow');
+						$('#intro5').removeClass('val_yellow');
+						$('#intro6').removeClass('val_yellow');
+						$('#hr4').addClass('val_yellow2');
+						$('#hr4').removeClass('val_yellow1');
+						$('#hr2').addClass('val_yellow1');
+						$('#hr2').removeClass('val_yellow2');
+						$('#hr3').addClass('val_yellow1');
+						$('#hr3').removeClass('val_yellow2');
+						$('#hr1').addClass('val_yellow1');
+						$('#hr1').removeClass('val_yellow2');
+						$('#hr5').addClass('val_yellow1');
+						$('#hr5').removeClass('val_yellow2');
+						$('#hr6').addClass('val_yellow1');
+						$('#hr6').removeClass('val_yellow2');
+					}
+					function x5(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-shejiao.jpg' style='width:64%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro5').addClass('val_yellow');
+						$('#intro2').removeClass('val_yellow');
+						$('#intro3').removeClass('val_yellow');
+						$('#intro4').removeClass('val_yellow');
+						$('#intro1').removeClass('val_yellow');
+						$('#intro6').removeClass('val_yellow');
+						$('#hr5').addClass('val_yellow2');
+						$('#hr5').removeClass('val_yellow1');
+						$('#hr2').addClass('val_yellow1');
+						$('#hr2').removeClass('val_yellow2');
+						$('#hr3').addClass('val_yellow1');
+						$('#hr3').removeClass('val_yellow2');
+						$('#hr4').addClass('val_yellow1');
+						$('#hr4').removeClass('val_yellow2');
+						$('#hr1').addClass('val_yellow1');
+						$('#hr1').removeClass('val_yellow2');
+						$('#hr6').addClass('val_yellow1');
+						$('#hr6').removeClass('val_yellow2');
+					}
+					function x6(){
+						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
+						setTimeout(function(){  //500毫秒后执行此方法
+							$(".center img").remove(); //删除图片
+							document.getElementById("picid").innerHTML="<img id='src2' class='animated zoomIn' src='img/part3-quanjia.jpg' style='width:64%;margin-bottom:0;vertical-align:bottom' >";
+							<!-- $("<img/>").attr("src",'img/part3-zhengjian.png').addClass("animated zoomIn").insertBefore($("#p1")); -->
+						},500);
+						$('#intro6').addClass('val_yellow');
+						$('#intro2').removeClass('val_yellow');
+						$('#intro3').removeClass('val_yellow');
+						$('#intro4').removeClass('val_yellow');
+						$('#intro5').removeClass('val_yellow');
+						$('#intro1').removeClass('val_yellow');
+						$('#hr6').addClass('val_yellow2');
+						$('#hr6').removeClass('val_yellow1');
+						$('#hr2').addClass('val_yellow1');
+						$('#hr2').removeClass('val_yellow2');
+						$('#hr3').addClass('val_yellow1');
+						$('#hr3').removeClass('val_yellow2');
+						$('#hr4').addClass('val_yellow1');
+						$('#hr4').removeClass('val_yellow2');
+						$('#hr5').addClass('val_yellow1');
+						$('#hr5').removeClass('val_yellow2');
+						$('#hr1').addClass('val_yellow1');
+						$('#hr1').removeClass('val_yellow2');
+					}
+				</script>
+				<div id = 'picid' style="padding:0;" align="center" class = "center animated">
+					<img id="src2" class="animated" src="img/part3-zhengjian.jpg" style="width:90%;margin-bottom:0;vertical-align:bottom" >
+					<p id = "p1" style = "display:none;">sad</p>
+				</div>
+				<div align=center style="margin-top:15px;margin-bottom;50px;">
+					<table style="table-layout:fixed;width:90%;">
+						<tr align = "center">
+							<td id="intro1" class ="val_yellow" onclick = "x1()" style="text-align:center;cursor:pointer;"><p  style="font-family:'微软雅黑';font-size: 70%;">ID Photo</p><p style="font-family:'微软雅黑'">证件照</p></td>
+							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 70%;">Image Photo</p><p style="font-family:'微软雅黑'">形象照</p></td>
+							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 70%;">Team Photo</p><p style="font-family:'微软雅黑'">团队照</p></td>
+							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 70%;">Marry Photo&nbsp&nbsp</p><p style="font-family:'微软雅黑'">结婚照&nbsp&nbsp</p></td>
+						</tr>
+						<tr align="center">
+							<td id="intro5" onclick = "x5()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 10px;">Sociality Photo&nbsp&nbsp</p><p style="font-family:'微软雅黑'">社交头像&nbsp&nbsp</p></td>
+							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p id="text6" style="font-family:'微软雅黑';font-size: 70%;">Family Photo</p><p style="font-family:'微软雅黑'">全家福</p></td>
+							<td id="intro7" style="text-align:center;cursor:pointer;"><p id="text7" style="font-family:'微软雅黑';font-size: 70%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">More</p><p style="font-family:'微软雅黑'">更多</p></td>
+						</tr>
+					</table>
+				</div>
+				<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+		</div>
+		<div id = "part5">
+			<div id="p5-part1" class="row">
+				<div class = "col-xs-2 col-md-2">
+					<p>北京
+					<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+				</div>
+				<div class = "col-xs-2 col-md-2">
+					<p>天津
+					<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
+				</div>
+			</div>
+			
+			<div id = "p5-part2" class="row">
+				<div class = "col-xs-6 col-md-6">
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">五道口店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:海淀区五道口华清商务会馆601室
+					<p>Tel: 010-59436010
+				</div>
+				<div class = "col-xs-6 col-md-6">
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">华宇店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:中关村南大街中关村科技发展大厦C座207
+					<p>Tel: 010-59436657
+				</div>	
+			</div>
+			
+			<div id = "p5-part3" class="row">
+				<div class = "col-xs-6 col-md-6">
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">四道口店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:学院南路智慧大厦301A 
+					<p>Tel: 010-59433018
+				</div>
+				<div class = "col-xs-6 col-md-6">
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">国贸店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:九龙山地铁站西边200米红点艺术工厂207  
+					<p>Tel: 010-59437227
+				</div>	
+			</div>
+			
+			<div id = "p5-part4" class="row">
+				<div class = "col-xs-6 col-md-6">
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">外经贸店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:惠新东街11号紫光发展大厦B座2单元402室
+					<p>Tel: 010-59438919
+				</div>
+					
+			</div>
+		</div>
+		
+		<div id="footer" class="row" style="background-color:#1fbbd4;padding:30px 0px 0px 0px">
+			<div class="col-md-2" ></div>
+			<div class="col-md-8" align="center">
+				<p style="font-size:40px;color:#FFFFFF;" align="center"><font style="font-weight:800;">Say</font> Hello
+				<p style="font-size:16px;font-family:'微软雅黑';color:#FFFFFF;" align="center">匠人精神，用照片致敬“匠人精神”。方寸之间，见真功夫。在通往极致的路上，我们从没有懈怠。
+				<form action="#" method="get">
+					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
+						<input type="text" name="email" style="height:42px;margin-right:5%;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
+						<input type="text" style="height:42px;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
+					</div>
+					<div style="width:90%">
+						<input type="text" style="height:142px;width:77%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
+					</div>
+					<div style="width:90%">
+						<input type="submit" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
+					</div>
+					
+					<div style="width:90%"></div>
+				</form>
+			</div>
+			<div class="col-md-2" ></div>
+		</div>
+		
+	</body>
+</html>

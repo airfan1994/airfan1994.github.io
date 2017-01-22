@@ -58,7 +58,9 @@
                 <script language="javascript">
                     function clb()
                     {
-                        alert('sd');
+                        $('#globalMsgModal').modal({
+        keyboard: true
+    });
                     }
                 </script>
 				<div id = "up2-left" class="col-xs-6 col-md-6" align="center" style = "padding:10px;border-style:solid;border-width:1px;border-color:#D0D0D0;border-left-style:none;">
@@ -606,6 +608,37 @@ border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-co
 					</div>
 			</div>
 		</div>
+        
+        <script language = "javascript">
+		var timestampdown = new Date().getTime();
+			var timestampup = new Date().getTime();
+//			function clmodal(){
+//			
+//			alert(timestamp);
+//				 $('#myModal2').modal({
+ //       keyboard: true
+  //  }); }
+	var mouseButtonDown=false;
+	function mousePress()
+	{
+		mouseButtonDown=true;
+		timestampdown = new Date().getTime();
+	}
+
+	function mouseUp(obj)
+	{
+	timestampup = new Date().getTime();
+		mouseButtonDown=false;
+		if(timestampup-timestampdown<=200){
+			$("#tuku_img").attr('src',obj.src);
+			$('#myModal2').modal({
+        keyboard: true
+    });
+		}
+	}
+	
+		</script>
+        
         
 		<script language = "javascript">
 			function tuku1(){

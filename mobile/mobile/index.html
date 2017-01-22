@@ -25,6 +25,22 @@
 	</head>
 	<body style="background-color: #FFFFFF;">
 	
+    <script language="javascript">
+				function stro0(){ $("html,body").animate({scrollTop: 0}, 666);
+				}
+				function stro1(){ $("html,body").animate({scrollTop: $("#part2").offset().top-140}, 666);
+				}
+				function stro2(){ $("html,body").animate({scrollTop: $("#part3").offset().top-90}, 666);
+				}
+				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-90}, 666);
+				}
+				function stro4(){ $("html,body").animate({scrollTop: $("#part5").offset().top-90}, 666);
+				}
+				function stro5(){ $("html,body").animate({scrollTop: $("#footer").offset().top-50}, 666);
+				}
+			</script>
+    
+    
 		<script type="text/javascript">
 			
 		window.onload=function(){ 
@@ -39,30 +55,30 @@
 				<img src="img/logo3.jpg" height="182" width="348"/>
 			</div>
 			<div id="up2" class = "row">
-				<div id = "up2-left" class="col-xs-6 col-md-6" align="center">
-					<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">010-59436010</p>
+				<div id = "up2-left" class="col-xs-6 col-md-6" align="center" style = "padding:10px;border-style:solid;border-width:1px;border-color:#D0D0D0;border-left-style:none;">
+					<p style="font-family:'微软雅黑';font-size: 200%; color:#1fbbde;">010-59436010</p>
 				</div>
-				<div id = "up2-right" class="col-xs-6 col-md-6" align="center">
-					<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">微信马上预约</p>
+				<div id = "up2-right" class="col-xs-6 col-md-6" align="center" style = "padding:10px;border-style:solid;border-width:1px;border-color:#D0D0D0;border-left-style:none;">
+					<p style="font-family:'微软雅黑';font-size: 200%;color:#1fbbde;">微信马上预约</p>
 				</div>
 				<div id = "up-banner" class = "row">
-					<div id = "up-banner1" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">首页</p>
+					<div id = "up-banner1" class="col-xs-2 col-md-2" align="center"  style="padding:10px;" onclick="stro0()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">首页</p>
 					</div>
-					<div id = "up-banner2" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">关于我们</p>
+					<div id = "up-banner2" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro1()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">关于我们</p>
 					</div>
-					<div id = "up-banner3" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">服务流程</p>
+					<div id = "up-banner3" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro2()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">服务流程</p>
 					</div>
-					<div id = "up-banner4" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">客片欣赏</p>
+					<div id = "up-banner4" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro3()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">客片欣赏</p>
 					</div>
-					<div id = "up-banner5" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">店铺信息</p>
+					<div id = "up-banner5" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro4()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">店铺信息</p>
 					</div>
-					<div id = "up-banner6" class="col-xs-2 col-md-2" align="center">
-						<p style="font-family:'微软雅黑';font-size: 200%;margin-bottom:20px;">联系我们</p>
+					<div id = "up-banner6" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro5l()">
+						<p style="font-family:'微软雅黑';font-size: 200%;">联系我们</p>
 					</div>
 				</div>
 			</div>
@@ -214,7 +230,7 @@
 			<img src = "img/wx.jpg" style="margin-top:50px;width:18%;max-width:200px;">
 			<img src = "img/sina.jpg" style="margin-top:50px;width:18%;max-width:200px;margin-left:15%;" >
 			<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
-		<div>
+		</div>
 			
 		<div id = "part3" align = "center" style = "width:100%">
 			<p style="font-family:'微软雅黑';font-size: 300%;margin-top:30px;margin-bottom:20px;">服务流程

@@ -50,11 +50,11 @@
 					$('.banner ul li').css({height:window_width1*0.3607});
 		} 
 		</script>
-		<div id = "part1">
-			<div id="up1" align = "center">
-				<img src="img/logo3.jpg" height="182" width="348"/>
-			</div>
-			<div id="up2" class = "row">
+		<div id = "part1" style="width:100%;height:230px;">
+			<!-- <div id="up1" align = "center">
+				<img src="img/logo3.jpg" height="91" width="174"/>
+			</div> -->
+			<div id="up2" class = "row" style="margin-right: 0;margin-left: 0;width: 100%;">
                 <script language="javascript">
                     function clb()
                     {
@@ -63,36 +63,39 @@
     });
                     }
                 </script>
+                <div id="up1" align = "center">
+					<img src="img/logo3.jpg" height="91" width="174"/>
+				</div>
 				<div id = "up2-left" class="col-xs-6 col-md-6" align="center" style = "padding:10px;border-style:solid;border-width:1px;border-color:#D0D0D0;border-left-style:none;">
 					<p style="font-family:'微软雅黑';font-size: 200%; color:#1fbbde;">010-59436010</p>
 				</div>
 				<div id = "up2-right" class="col-xs-6 col-md-6" align="center" style = "padding:10px;border-style:solid;border-width:1px;border-color:#D0D0D0;border-left-style:none;">
 					<p style="font-family:'微软雅黑';font-size: 200%;color:#1fbbde;" onclick="clb()">微信马上预约</p>
 				</div>
-				<div id = "up-banner" class = "row">
-					<div id = "up-banner1" class="col-xs-2 col-md-2" align="center"  style="padding:10px;" onclick="stro0()">
+				<div id = "up-banner" class = "row" style="padding-right:20px;">
+					<div id = "up-banner1" class="col-xs-2 col-md-2" align="center"  style="padding:20px 0px 25px 0px;" onclick="stro0()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">首页</p>
 					</div>
-					<div id = "up-banner2" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro1()">
+					<div id = "up-banner2" class="col-xs-2 col-md-2" align="center" style="padding:20px 0px 25px 0px;" onclick="stro1()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">关于我们</p>
 					</div>
-					<div id = "up-banner3" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro2()">
+					<div id = "up-banner3" class="col-xs-2 col-md-2" align="center" style="padding:20px 0px 25px 0px;" onclick="stro2()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">服务流程</p>
 					</div>
-					<div id = "up-banner4" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro3()">
+					<div id = "up-banner4" class="col-xs-2 col-md-2" align="center" style="padding:20px 0px 25px 0px;" onclick="stro3()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">客片欣赏</p>
 					</div>
-					<div id = "up-banner5" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro4()">
+					<div id = "up-banner5" class="col-xs-2 col-md-2" align="center" style="padding:20px 0px 25px 0px;" onclick="stro4()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">店铺信息</p>
 					</div>
-					<div id = "up-banner6" class="col-xs-2 col-md-2" align="center" style="padding:10px;" onclick="stro5()">
+					<div id = "up-banner6" class="col-xs-2 col-md-2" align="center" style="padding:20px 0px 25px 0px;" onclick="stro5()">
 						<p style="font-family:'微软雅黑';font-size: 200%;">联系我们</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<div id="navimg" class="banner" style="width:100%;">
+		<div id="navimg" class="banner" style="width:100%;margin-top:230px;">
 				<ul></ul>
 				<ol></ol>
 				<i class="left"></i><i class="right"></i>
@@ -103,6 +106,7 @@
 		var images_height = String(parseInt(window_width*0.36071))+'px';
 		//图片路径/链接(数组形式):
 		var images_url1 = [
+			'img/bannerjiaqi6.jpg',
 			'img/bannera6.jpg',
 			'img/bannerb6.jpg',
 			'img/bannerc6.jpg'
@@ -302,7 +306,7 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 			<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
 		</div>
 		
-		<div id="part4" align="center" style="padding:30px 20px 20px 20px;">
+		<div id="part4" align="center" style="width:100%;padding:30px 20px 20px 20px;">
 				<script language = "javascript">
 					function x1(){
 						$("#src2").removeClass("zoomIn").addClass("fadeOutRight"); //删除单击图片的zoomIn类，添加fadeOutRight类
@@ -467,16 +471,16 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 				</div>
 				<div align=center style="margin-top:15px;margin-bottom;50px;">
 					<table style="table-layout:fixed;width:90%;">
-						<tr align = "center">
-							<td id="intro1" class ="val_yellow" onclick = "x1()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">证件照</p><hr id="hr1" class="val_yellow2" style="width:50%; margin-right:20%;border: 0;color:#1fbbde;height: 3px"></td>
-							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">形象照</p><hr id="hr2"  class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">团队照</p><hr id="hr3" class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">结婚照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+						<tr align = "left">
+							<td id="intro1" class ="val_yellow" onclick = "x1()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">证件照</p><hr id="hr1" class="val_yellow2" style="margin-top: 10px;width:50%; margin-left:0;border: 0;color:#1fbbde;height: 3px"></td>
+							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">形象照</p><hr id="hr2"  class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
+							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">团队照</p><hr id="hr3" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">结婚登记照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
-						<tr align="center">
-							<td id="intro5" onclick = "x5()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">社交头像&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'">全家福</p><hr id="hr6" class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro7" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑'" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多</p><hr id="hr7" class="val_yellow1" style="width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+						<tr align="left">
+							<td id="intro5" onclick = "x5()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">社交头像照&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="margin-top: 10px;width:50%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
+							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro7" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 					</table>
 				</div>
@@ -521,7 +525,7 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
                 $('#p5p8').removeClass('mydiv3');
             }
         </script>
-		<div id = "part5" style="padding:30px 0 30px 5%;">
+		<div id = "part5" style="padding:30px 0px 30px 7%;width:100%;height:890px;">
 			<div id="p5-part1" class="row" style = "margin-bottom:30px;">
 				<div class = "col-xs-2 col-md-2" onclick="beijing()">
 					<p id ="p5p1" style = "font-family:'微软雅黑';font-size:300%;" class = "val_yellow">北京
@@ -535,38 +539,38 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 			
 			<div id = "p5-part2" class="row">
 				<div class = "col-xs-6 col-md-6" id = "p5-part21">
-					<p id="p5p3" style="margin-bottom:20px;font-family:'微软雅黑';">五道口店</p>
-					<p id="p5p4" style="margin-bottom:10px;font-family:'微软雅黑';">Add:海淀区五道口华清商务会馆601室
-					<p id="p5p5">Tel: 010-59436010
-                    <p id="p5p6" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';">恒隆店</p>
-					<p id="p5p7" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';"> Add:天津市和平区滨江道恒隆广场5039商铺
-					<p id="p5p8" class="mydiv3" >Tel：022-27300585
+					<p id="p5p3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">五道口店</p>
+					<p id="p5p4" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:海淀区五道口华清商务会馆601室
+					<p id="p5p5" style="font-size:200%;">Tel: 010-59436010
+                    <p id="p5p6" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">恒隆店</p>
+					<p id="p5p7" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;"> Add:天津市和平区滨江道恒隆广场5039商铺
+					<p id="p5p8" class="mydiv3"  style="font-size:200%;">Tel：022-27300585
 				</div>
 				<div class = "col-xs-6 col-md-6" id = "p5-part22">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';">华宇店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:中关村南大街中关村科技发展大厦C座207
-					<p>Tel: 010-59436657
+					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">华宇店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:中关村南大街中关村科技发展大厦C座207
+					<p style="font-size:200%;">Tel: 010-59436657
 				</div>	
 			</div>
 			
-			<div id = "p5-part3" class="row">
+			<div id = "p5-part3" class="row" style="margin-top: 50px;">
 				<div class = "col-xs-6 col-md-6">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';">四道口店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:学院南路智慧大厦301A 
-					<p>Tel: 010-59433018
+					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">四道口店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:学院南路智慧大厦301A 
+					<p style="font-size:200%;">Tel: 010-59433018
 				</div>
 				<div class = "col-xs-6 col-md-6">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';">国贸店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:九龙山地铁站西边200米红点艺术工厂207  
-					<p>Tel: 010-59437227
+					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">国贸店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:九龙山地铁站西边200米红点艺术工厂207  
+					<p style="font-size:200%;">Tel: 010-59437227
 				</div>	
 			</div>
 			
-			<div id = "p5-part4" class="row">
+			<div id = "p5-part4" class="row" style="margin-top: 50px;">
 				<div class = "col-xs-6 col-md-6">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';">外经贸店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:惠新东街11号紫光发展大厦B座2单元402室
-					<p>Tel: 010-59438919
+					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">外经贸店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:惠新东街11号紫光发展大厦B座2单元402室
+					<p style="font-size:200%;">Tel: 010-59438919
 				</div>
 					
 			</div>
@@ -600,11 +604,11 @@ border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-co
 		</div>
         
 		<div class="modal fade" id="globalMsgModal" tabindex="-1" role="dialog" aria-labelledby="globalMsgModalLabel">
-			<div class="modal-dialog" role="document" style="width:220px;height:320px;margin-left: 67%;margin-top: 5%;" align=center>
+			<div class="modal-dialog" role="document" style="width:30%;margin-left: 67%;margin-top: 5%;" align=center>
 					<div class="modal-content" align=center>
-						<img src="img/aa.jpg" height="200" width="200" alt="" style="margin:10px;";></img>
+						<img src="img/aa.jpg" alt="" style="width:93%;margin:10px;";></img>
 						<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
-						<div style="height:40px;"><p style="margin-top:10px;font-family:'微软雅黑';">请扫描二维码预约</p></div>
+						<div style="height:40px;"><p style="margin-top:10px;font-family:'微软雅黑';font-size: 200%">请扫描二维码预约</p></div>
 					</div>
 			</div>
 		</div>

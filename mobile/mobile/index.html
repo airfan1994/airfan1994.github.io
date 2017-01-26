@@ -26,13 +26,14 @@
 	<body style="background-color: #FFFFFF;">
 	
     <script language="javascript">
+    //var window_width3 = $(window).width();
 				function stro0(){ $("html,body").animate({scrollTop: 0}, 666);
 				}
-				function stro1(){ $("html,body").animate({scrollTop: $("#part2").offset().top}, 666);
+				function stro1(){ $("html,body").animate({scrollTop: $("#part2").offset().top-230}, 666);
 				}
-				function stro2(){ $("html,body").animate({scrollTop: $("#part3").offset().top}, 666);
+				function stro2(){ $("html,body").animate({scrollTop: $("#part3").offset().top-200}, 666);
 				}
-				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top}, 666);
+				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-250}, 666);
 				}
 				function stro4(){ $("html,body").animate({scrollTop: $("#part5").offset().top}, 666);
 				}
@@ -92,6 +93,7 @@
 						<p style="font-family:'微软雅黑';font-size: 200%;">联系我们</p>
 					</div>
 				</div>
+				<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
 			</div>
 		</div>
 		
@@ -191,7 +193,7 @@
 		}
 		function nextPlay(){
 			num++;
-			/*if(num>images_count){
+			if(num>images_count){
 				//播放到最后一张(复制页)后,悄悄地把图片跳到第一张,因为和第一张相同,所以难以发觉,
 				$('.banner ul').css({left:0}).stop().animate({left:-window_width},300);
 				//css({left:0})是直接悄悄改变位置，animate({left:-window_width},500)是做出移动动画
@@ -201,17 +203,17 @@
 				//在最后面加入一张和第一张相同的图片，如果播放到最后一张，继续往下播，悄悄回到第一张(肉眼看不见)，从第一张播放到第二张
 				//console.log(num);
 				$('.banner ul').stop().animate({left:-num*window_width},1000);
-			}*/
-			if(num==images_count)
-				num=0;
-			$('.banner ul').stop().animate({left:-num*window_width},1000);
-			$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
-			//if(num==images_count){
-			//	$('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
-			//}else{
-				//$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			}
+			//if(num==images_count)
+			//	num=0;
+			//$('.banner ul').stop().animate({left:-num*window_width},1000);
+			//$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			if(num==images_count){
+				$('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
+			}else{
+				$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
 
-			//}
+			}
 		}
 		timer = setInterval(nextPlay,4000);
 		//鼠标经过banner，停止定时器,离开则继续播放
@@ -472,15 +474,15 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 				<div align=center style="margin-top:15px;margin-bottom;50px;">
 					<table style="table-layout:fixed;width:90%;">
 						<tr align = "left">
-							<td id="intro1" class ="val_yellow" onclick = "x1()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">证件照</p><hr id="hr1" class="val_yellow2" style="margin-top: 10px;width:50%; margin-left:0;border: 0;color:#1fbbde;height: 3px"></td>
-							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">形象照</p><hr id="hr2"  class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">团队照</p><hr id="hr3" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">结婚登记照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro1" class ="val_yellow" onclick = "x1()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">证件照</p><hr id="hr1" class="val_yellow2" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#1fbbde;height: 3px"></td>
+							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">形象照</p><hr id="hr2"  class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
+							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">团队照</p><hr id="hr3" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">结婚登记照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 						<tr align="left">
-							<td id="intro5" onclick = "x5()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">社交头像照&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="margin-top: 10px;width:50%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro7" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:50%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro5" onclick = "x5()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">社交头像照&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
+							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro7" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多&nbsp&nbsp</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 					</table>
 				</div>
@@ -505,6 +507,7 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
                 $('#p5p3').removeClass('mydiv3');
                 $('#p5p4').removeClass('mydiv3');
                 $('#p5p5').removeClass('mydiv3');
+                $('#p5p9').removeClass('mydiv3');
             }
             function tianjin()
             {
@@ -520,12 +523,13 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
                 $('#p5p3').addClass('mydiv3');
                 $('#p5p4').addClass('mydiv3');
                 $('#p5p5').addClass('mydiv3');
+                $('#p5p9').addClass('mydiv3');
                 $('#p5p6').removeClass('mydiv3');
                 $('#p5p7').removeClass('mydiv3');
                 $('#p5p8').removeClass('mydiv3');
             }
         </script>
-		<div id = "part5" style="padding:30px 0px 30px 7%;width:100%;height:890px;">
+		<div id = "part5" style="padding:30px 0px 30px 7%;width:100%;height:930px;">
 			<div id="p5-part1" class="row" style = "margin-bottom:30px;">
 				<div class = "col-xs-2 col-md-2" onclick="beijing()">
 					<p id ="p5p1" style = "font-family:'微软雅黑';font-size:300%;" class = "val_yellow">北京
@@ -540,15 +544,17 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 			<div id = "p5-part2" class="row">
 				<div class = "col-xs-6 col-md-6" id = "p5-part21">
 					<p id="p5p3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">五道口店</p>
-					<p id="p5p4" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:海淀区五道口华清商务会馆601室
+					<p id="p5p4" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">海淀区五道口华清商务会馆
+					<p id="p5p9" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">601室
 					<p id="p5p5" style="font-size:200%;">Tel: 010-59436010
                     <p id="p5p6" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">恒隆店</p>
-					<p id="p5p7" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;"> Add:天津市和平区滨江道恒隆广场5039商铺
+					<p id="p5p7" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;"> 天津市和平区滨江道恒隆广场5039商铺
 					<p id="p5p8" class="mydiv3"  style="font-size:200%;">Tel：022-27300585
 				</div>
 				<div class = "col-xs-6 col-md-6" id = "p5-part22">
 					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">华宇店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:中关村南大街中关村科技发展大厦C座207
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">中关村南大街2号B座商业
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">底下B1-Z05
 					<p style="font-size:200%;">Tel: 010-59436657
 				</div>	
 			</div>
@@ -556,12 +562,14 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 			<div id = "p5-part3" class="row" style="margin-top: 50px;">
 				<div class = "col-xs-6 col-md-6">
 					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">四道口店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:学院南路智慧大厦301A 
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">学院南路智慧大厦
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">301A  
 					<p style="font-size:200%;">Tel: 010-59433018
 				</div>
 				<div class = "col-xs-6 col-md-6">
 					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">国贸店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:九龙山地铁站西边200米红点艺术工厂207  
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">九龙山地铁站西边200米
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">红点艺术工厂207 
 					<p style="font-size:200%;">Tel: 010-59437227
 				</div>	
 			</div>
@@ -569,7 +577,8 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 			<div id = "p5-part4" class="row" style="margin-top: 50px;">
 				<div class = "col-xs-6 col-md-6">
 					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">外经贸店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">Add:惠新东街11号紫光发展大厦B座2单元402室
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">惠新东街11号紫光发展大厦
+					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">B座2单元402室
 					<p style="font-size:200%;">Tel: 010-59438919
 				</div>
 					

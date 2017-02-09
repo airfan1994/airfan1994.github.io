@@ -20,16 +20,6 @@
 		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GQIfBgSoxpM2YEXp8twKBn7Iq2tnM8WP&s=1"></script> 
 		<link rel="stylesheet" href="css/jquery.zySlide.css">
     <link rel="stylesheet" href="css/nativeShare.css"/>
-    	<script type=”text/javascript”>
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	alert('ok1');
-window.location = “mobile.html”; //可以换成http地址
-}
-else{
-	window.location = “mobile1.html”;
-	alert('ok');
-}
-</script>
 	    <link rel="stylesheet" href="css/animate.min.css"/>
 	<link rel="shortcut icon" href="http://www.smile-time.cn/wp-content/themes/bootstrap/favicon.ico">
 	</head>
@@ -123,8 +113,10 @@ $('#navimg').css({height:parseInt(window_width1*0.3607)-14});
 				<i class="left"></i><i class="right"></i>
 				<hr style="width:100%; margin:0px;border: 0;color:#D0D0D0;background-color:#D0D0D0; height: 1px">
 			</div>
-				
 			<script type="text/javascript">	
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|Mobile|MI|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+window.location = 'http://www.smile-time.cn/mobile/mobile/'; //可以换成http地址
+}
 			var window_width = $(window).width();
 		var images_height = String(parseInt(window_width*0.36071))+'px';
 		//图片路径/链接(数组形式):
@@ -211,7 +203,7 @@ $('#navimg').css({height:parseInt(window_width1*0.3607)-14});
 
 			}
 		}
-		function nextPlay(){
+		function nextPlay1(){
 			num++;
 			/*if(num>images_count){
 				//播放到最后一张(复制页)后,悄悄地把图片跳到第一张,因为和第一张相同,所以难以发觉,
@@ -234,6 +226,30 @@ $('#navimg').css({height:parseInt(window_width1*0.3607)-14});
 				//$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
 
 			//}
+		}
+        function nextPlay(){
+			num++;
+			if(num>images_count){
+				//播放到最后一张(复制页)后,悄悄地把图片跳到第一张,因为和第一张相同,所以难以发觉,
+				$('.banner ul').css({left:0}).stop().animate({left:-window_width},300);
+				//css({left:0})是直接悄悄改变位置，animate({left:-window_width},500)是做出移动动画
+				//随后要把指针指向第二张图片,表示已经播放至第二张了。
+				num=1;
+			}else{
+				//在最后面加入一张和第一张相同的图片，如果播放到最后一张，继续往下播，悄悄回到第一张(肉眼看不见)，从第一张播放到第二张
+				//console.log(num);
+				$('.banner ul').stop().animate({left:-num*window_width},1000);
+			}
+			//if(num==images_count)
+			//	num=0;
+			//$('.banner ul').stop().animate({left:-num*window_width},1000);
+			//$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			if(num==images_count){
+				$('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
+			}else{
+				$('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+
+			}
 		}
 		timer = setInterval(nextPlay,4000);
 		//鼠标经过banner，停止定时器,离开则继续播放
@@ -836,13 +852,13 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 			document.getElementById("s4").style.width="350px";
 			document.getElementById("s4").style.padding="0";
 			$("#content4").removeClass('mydiv3');
-			document.getElementById("s4").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>魏公村店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style = 'font-size:30px;'>-</span></span>";
+			document.getElementById("s4").innerHTML="<div style='width:50px;border-style:solid;border-width:2px;border-color:#E0E0E0;border-top-style:none;border-bottom-style:none;border-left-style:none;height:50px;float:left'>&nbsp&nbsp&nbsp&nbsp&nbsp</div><div style='width:80px;float:left;padding:10px 0 0 10px;'>华宇店</div><span style='font-size:20px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style = 'font-size:30px;'>-</span></span>";
 		}
 		function mouseOut4()
 		{
 			document.getElementById("s4").style.width="300px";
 			document.getElementById("s4").style.padding="10px 0 0 10px";
-			document.getElementById("s4").innerHTML="<span  style='margin-left:20px;'>魏公村店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
+			document.getElementById("s4").innerHTML="<span  style='margin-left:20px;'>华宇店</span><span style='font-size:22px;'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span>";
 			document.getElementById("s4").style.width="300px";
 			document.getElementById("s4").style.padding="10px 0 0 10px";
 			//$("#content4").addClass('mydiv3');
@@ -925,7 +941,7 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 				<div class="mydiv6 mydiv18" id="s1" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver1()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>国贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv18" id="s2" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver2()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>四道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv18" id="s3" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver3()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>五道口店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
-				<div class="mydiv6 mydiv18" id="s4" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver4()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>魏公村店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
+				<div class="mydiv6 mydiv18" id="s4" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver4()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>华宇店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv18" id="s5" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver5()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>外经贸店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv3 mydiv18" id="s6" style="width:300px;background-color:#FFFFFF;height:52px;padding:10px 0 0 10px;cursor:pointer;" onclick="mouseOver6()"><span style='margin-left:20px;font-family:"微软雅黑";cursor:pointer;'>恒隆店</span><span style="font-size:22px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+</span></div>
 				<div class="mydiv6 mydiv4" style="width:300px;background-color:#FFFFFF;height:106px;"></div>
@@ -952,8 +968,8 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 					<div id="allmap3" class="allmap" style="margin-top:40px;height: 200px;width:100%;"></div>
 				</div>
 				<div id="content4" class="mydiv3">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';">魏公村店</p>
-					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:中关村南大街中关村科技发展大厦C座207
+					<p style="margin-bottom:20px;font-family:'微软雅黑';">华宇店</p>
+					<p style="margin-bottom:10px;font-family:'微软雅黑';">Add:中关村南大街2号B座商业底下B1-Z05
 					<p>Tel: 010-59436657
 					<div id="allmap4" class="allmap" style="margin-top:40px;height: 200px;width:100%;"></div>
 				</div>
@@ -1006,8 +1022,8 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 	map3.addOverlay(marker3);
 	
 	var map4 = new BMap.Map("allmap4");    // 创建Map实例
-	var point4 = new BMap.Point(116.33155,39.954692);
-	map4.centerAndZoom(new BMap.Point(116.32955,39.955692), 17);  // 初始化地图,设置中心点坐标和地图级别
+	var point4 = new BMap.Point(116.330097,39.971178);
+	map4.centerAndZoom(new BMap.Point(116.327697,39.972678), 17);  // 初始化地图,设置中心点坐标和地图级别
 	map4.addControl(new BMap.MapTypeControl());   //添加地图类型控件
 	map4.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
 	map4.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
@@ -1035,12 +1051,10 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 		<script language = "javascript">
 		var timestampdown = new Date().getTime();
 			var timestampup = new Date().getTime();
-//			function clmodal(){
-//			
-//			alert(timestamp);
+			
 //				 $('#myModal2').modal({
  //       keyboard: true
-  //  }); }
+   
 	var mouseButtonDown=false;
 	function mousePress()
 	{
@@ -1070,20 +1084,38 @@ border-width:1px;border-color:#F0F0F0;border-bottom-style:none;-moz-border-radiu
 				<p style="font-size:16px;font-family:'微软雅黑';color:#FFFFFF;" align="center">匠人精神，用照片致敬“匠人精神”。方寸之间，见真功夫。在通往极致的路上，我们从没有懈怠。
 				<form action="#" method="get">
 					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
-						<input type="text" name="email" style="height:42px;margin-right:5%;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
-						<input type="text" style="height:42px;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
+						<input type="text" id="email_name" style="height:42px;margin-right:5%;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    姓名"/>
+						<input type="text" id="email_dian" style="height:42px;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    服务店铺"/>
 					</div>
 					<div style="width:90%">
-						<input type="text" style="height:142px;width:77%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
+						<textarea id="sdds" type="text" style="height:142px;width:77%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="                                               我们期待您的意见和建议"></textarea></br>
 					</div>
 					<div style="width:90%">
-						<input type="submit" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
+						<input type="button" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
 border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
 					</div>
-					
+					<script language="javascript">
+                        document.getElementById("sdds").value="                                               我们期待您的意见和建议";
+                        function clmodal(){ 
+                        var tal= $("#sdds").val();
+                        var email_name= $("#email_name").val();
+                        var email_dian= $("#email_dian").val();
+                        $.ajax({
+                url:"http://www.smile-time.cn/api/sendEmail.php",
+                type:"post",
+                data:{content:tal,shop:email_dian,name:email_name},
+                success:function(data){
+                    alert('发送成功！');
+                },
+                error:function(e){
+                    alert("发送成功！");
+                }
+            });
+            }
+                    </script>
 					<div style="width:90%">
 						<!-- <ul>
 				<li class="sian"><a href="javascript:void(0)" onclick="jumpUrl('tsina')" title="分享到新浪微博"></a></li>

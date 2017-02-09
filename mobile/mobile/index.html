@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no;"/>
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 		<title>微笑时刻</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,9 +34,9 @@
 				}
 				function stro2(){ $("html,body").animate({scrollTop: $("#part3").offset().top-200}, 666);
 				}
-				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-250}, 666);
+				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-320}, 666);
 				}
-				function stro4(){ $("html,body").animate({scrollTop: $("#part5").offset().top-100}, 666);
+				function stro4(){ $("html,body").animate({scrollTop: $("#part5").offset().top-240}, 666);
 				}
 				function stro5(){ $("html,body").animate({scrollTop: $("#footer").offset().top}, 666);
 				}
@@ -108,7 +109,6 @@
 		var images_height = String(parseInt(window_width*0.36071))+'px';
 		//图片路径/链接(数组形式):
 		var images_url1 = [
-			'img/bannerjiaqi6.jpg',
 			'img/bannera6.jpg',
 			'img/bannerb6.jpg',
 			'img/bannerc6.jpg'
@@ -475,14 +475,14 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 					<table style="table-layout:fixed;width:90%;">
 						<tr align = "left">
 							<td id="intro1" class ="val_yellow" onclick = "x1()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">证件照</p><hr id="hr1" class="val_yellow2" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#1fbbde;height: 3px"></td>
-							<td id="intro2" onclick = "x2()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">形象照</p><hr id="hr2"  class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro3" onclick = "x3()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">团队照</p><hr id="hr3" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro4" onclick = "x4()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">结婚登记照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro2" onclick = "x2()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">形象照</p><hr id="hr2"  class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
+							<td id="intro3" onclick = "x3()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">团队照</p><hr id="hr3" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro4" onclick = "x4()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">结婚登记照&nbsp&nbsp</p><hr id="hr4" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 						<tr align="left">
 							<td id="intro5" onclick = "x5()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">社交头像照&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
-							<td id="intro6" onclick = "x6()" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro7" style="text-align:center;cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多&nbsp&nbsp</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:68%; margin-right:20%;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro6" onclick = "x6()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:68%;margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro7" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多&nbsp&nbsp</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 					</table>
 				</div>
@@ -592,20 +592,38 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 				<p style="font-size:16px;font-family:'微软雅黑';color:#FFFFFF;" align="center">匠人精神，用照片致敬“匠人精神”。方寸之间，见真功夫。在通往极致的路上，我们从没有懈怠。
 				<form action="#" method="get">
 					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
-						<input type="text" name="email" style="height:42px;margin-right:5%;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    email'" value="    email"/>
-						<input type="text" style="height:42px;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    profession'" value="    profession"/>
+						<input type="text" id = "email_name" style="height:42px;margin-right:5%;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    姓名"/>
+						<input type="text" id = 'email_name' style="height:42px;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    服务店铺"/>
 					</div>
 					<div style="width:90%">
-						<input type="text" style="height:142px;width:77%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" onBlur="this.value='    Message'" value="    Message"/></br>
+						<textarea id="sdds" type="text" style="height:142px;width:77%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="                                             我们期待您的意见和建议"></textarea></br>
 					</div>
 					<div style="width:90%">
 						<input type="submit" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
 border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
 					</div>
-					
+					<script language="javascript">
+                        document.getElementById("sdds").value="                                               我们期待您的意见和建议";
+                        function clmodal(){ 
+                        var tal= $("#sdds").val();
+                        var email_name= $("#email_name").val();
+                        var email_dian= $("#email_dian").val();
+                        $.ajax({
+                url:"http://www.smile-time.cn/api/sendEmail.php",
+                type:"post",
+                data:{content:tal,shop:email_dian,name:email_name},
+                success:function(data){
+                    alert('发送成功！');
+                },
+                error:function(e){
+                    alert("发送成功！");
+                }
+            });
+            }
+                    </script>
 					<div style="width:90%"></div>
 				</form>
 			</div>
@@ -1475,39 +1493,39 @@ border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-co
 				<div class="modal-content" style="width:1200px;background-color:#F8F8F8;">
 					<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:48%">图片欣赏</h4>
+							<h4 class="modal-title" id="globalMsgModalLabel" style="margin-left:40%;font-size:200%;">图片欣赏</h4>
 					</div>
 					<div class="row" style="width:100%;background-color:#FFFFFF;margin-left:0px;height:32px;">
 						<div class="col-xs-1 col-md-1"></div>
 						<div id="tukudiv1" onclick="tuku1()" class="col-xs-1 col-md-1 tukudiv_active" style="cursor:pointer;">
-							<hr id="tukuhr1" style="" class="tukuhr_active">
-							<p align="center">证件照
+							<hr id="tukuhr1" class="tukuhr_active">
+							<p align="center" style="font-size:150%" >证件照
 						</div>
 						<div id="tukudiv2" onclick="tuku2()"  class="col-xs-1 col-md-1 tukudiv" style="cursor:pointer;">
-							<hr id="tukuhr2" style="" class="tukuhr">
-							<p align="center">形象照
+							<hr id="tukuhr2" class="tukuhr">
+							<p align="center" style="font-size:150%">形象照
 						</div>
 						<div id="tukudiv3" onclick="tuku3()"  class="col-xs-1 col-md-1" style="cursor:pointer;">
-							<hr id="tukuhr3" style="" class="tukuhr">
-							<p align="center">结婚照
+							<hr id="tukuhr3" class="tukuhr">
+							<p align="center" style="font-size:150%">结婚照
 						</div>
 						<div id="tukudiv4" onclick="tuku4()"  class="col-xs-1 col-md-1" style="cursor:pointer;">
-							<hr id="tukuhr4" style="" class="tukuhr">
-							<p align="center">团队照
+							<hr id="tukuhr4" class="tukuhr">
+							<p align="center" style="font-size:150%">团队照
 						</div>
 						<div id="tukudiv5" onclick="tuku5()"  class="col-xs-1 col-md-1" style="cursor:pointer;">
-							<hr id="tukuhr5" style="" class="tukuhr">
-							<p align="center">全家照
+							<hr id="tukuhr5" class="tukuhr">
+							<p align="center" style="font-size:150%">全家照
 						</div>
 						<div id="tukudiv6" onclick="tuku6()"  class="col-xs-1 col-md-1" style="cursor:pointer;">
-							<hr id="tukuhr6" style="" class="tukuhr">
-							<p align="center">头像照
+							<hr id="tukuhr6" class="tukuhr">
+							<p align="center" style="font-size:150%">头像照
 						</div>
-						<div id="tukudiv6" class="col-xs-1 col-md-1" style="">
-							<hr id="tukuhr7" style="" class="tukuhr">
-							<p align="center">更多期待
+						<div id="tukudiv6" class="col-xs-2 col-md-2" style="">
+							<hr id="tukuhr7" class="tukuhr">
+							<p align="center" style="font-size:150%">更多期待
 						</div>
-						<div class="col-xs-1 col-md-4" style="">
+						<div class="col-xs-3 col-md-3" style="">
 						</div>
 					</div>
 					<div style="height:600px;">

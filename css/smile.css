@@ -8,6 +8,18 @@
 	   position:fixed;
 
 }
+::-webkit-input-placeholder { 
+color: #FFF5EE; text-overflow: ellipsis; font-family:'微软雅黑';
+} 
+:-moz-placeholder { 
+color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+} 
+::-moz-placeholder { 
+color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+} /* for the future */ 
+:-ms-input-placeholder { 
+color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+} 
 
 
 .banner{

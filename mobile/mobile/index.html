@@ -34,7 +34,7 @@
 				}
 				function stro2(){ $("html,body").animate({scrollTop: $("#part3").offset().top-200}, 666);
 				}
-				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-320}, 666);
+				function stro3(){ $("html,body").animate({scrollTop: $("#part4").offset().top-310}, 666);
 				}
 				function stro4(){ $("html,body").animate({scrollTop: $("#part5").offset().top-240}, 666);
 				}
@@ -199,6 +199,7 @@
 				//css({left:0})是直接悄悄改变位置，animate({left:-window_width},500)是做出移动动画
 				//随后要把指针指向第二张图片,表示已经播放至第二张了。
 				num=1;
+                $('.banner ul').stop().animate({left:-num*window_width},1000);
 			}else{
 				//在最后面加入一张和第一张相同的图片，如果播放到最后一张，继续往下播，悄悄回到第一张(肉眼看不见)，从第一张播放到第二张
 				//console.log(num);
@@ -482,7 +483,7 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 						<tr align="left">
 							<td id="intro5" onclick = "x5()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">社交头像照&nbsp&nbsp</p><hr id="hr5" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0; height: 3px"></td>
 							<td id="intro6" onclick = "x6()" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;">全家福</p><hr id="hr6" class="val_yellow1" style="margin-top: 10px;width:68%;margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
-							<td id="intro7" style="cursor:pointer;"><p style="font-family:'微软雅黑';font-size: 200%;" data-toggle="modal" data-target="#globalMsgModals" onclick="cla()">更多&nbsp&nbsp</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
+							<td id="intro7" style="cursor:pointer;"  data-toggle="modal" data-target="#globalMsgModals" onclick="cla()"><p style="font-family:'微软雅黑';font-size: 200%;">更多&nbsp&nbsp</p><hr id="hr7" class="val_yellow1" style="margin-top: 10px;width:68%; margin-left:0;border: 0;color:#D0D0D0;height: 3px"></td>
 						</tr>
 					</table>
 				</div>
@@ -593,20 +594,19 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 				<form action="#" method="get">
 					<div style="width:90%;margin-top:32px;margin-bottom:26px;">
 						<input type="text" id = "email_name" style="height:42px;margin-right:5%;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    姓名"/>
-						<input type="text" id = 'email_name' style="height:42px;width:36%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="    服务店铺"/>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" placeholder="    姓名"/>
+						<input type="text" id = 'email_dian' style="height:42px;width:36%;border-style:solid;
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" placeholder="    服务店铺"/>
 					</div>
 					<div style="width:90%">
 						<textarea id="sdds" type="text" style="height:142px;width:77%;border-style:solid;
-border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" onFocus="this.value=''" value="                                             我们期待您的意见和建议"></textarea></br>
+border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" placeholder="                                         我们期待您的意见和建议"></textarea></br>
 					</div>
 					<div style="width:90%">
 						<input type="submit" onclick="clmodal()" style="height:42px;width:77%;border-style:solid;
 border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-color:#1fbbd4;margin-top:26px;-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius:7px;" value="send message"/>
 					</div>
 					<script language="javascript">
-                        document.getElementById("sdds").value="                                               我们期待您的意见和建议";
                         function clmodal(){ 
                         var tal= $("#sdds").val();
                         var email_name= $("#email_name").val();
@@ -617,9 +617,15 @@ border-width:2px;border-color:#FFFFFF;font-size:18px;color:#FFFFFF;background-co
                 data:{content:tal,shop:email_dian,name:email_name},
                 success:function(data){
                     alert('发送成功！');
+                    document.getElementById('sdds').value="";
+                    document.getElementById('email_name').value="";
+                    document.getElementById('email_dian').value="";
                 },
                 error:function(e){
                     alert("发送成功！");
+                    document.getElementById('sdds').value="";
+                    document.getElementById('email_name').value="";
+                    document.getElementById('email_dian').value="";
                 }
             });
             }

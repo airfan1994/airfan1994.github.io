@@ -9,17 +9,17 @@
 
 }
 ::-webkit-input-placeholder { 
-color: #FFF5EE; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6; text-overflow: ellipsis;text-align:center; font-family:'微软雅黑';
 } 
 :-moz-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
 } 
 ::-moz-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
 } /* for the future */ 
 :-ms-input-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
-}
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
+} 
 
 .banner{
 			width: 100%;

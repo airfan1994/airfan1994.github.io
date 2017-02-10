@@ -9,16 +9,16 @@
 
 }
 ::-webkit-input-placeholder { 
-color: #FFF5EE; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6; text-overflow: ellipsis;text-align:center; font-family:'微软雅黑';
 } 
 :-moz-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
 } 
 ::-moz-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
 } /* for the future */ 
 :-ms-input-placeholder { 
-color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
 } 
 
 
@@ -26,7 +26,6 @@ color: #FFF5EE !important; text-overflow: ellipsis; font-family:'微软雅黑';
 			width: 100%;
 			/*height: 560px;*/
 			/*background: black;*/
-			/*子绝父相*/
 			position: relative;
 			/*超出部分全部隐藏，解决横向滚动条*/
 			overflow: hidden;

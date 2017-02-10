@@ -9,16 +9,16 @@
 
 }
 ::-webkit-input-placeholder { 
-color: #ADD8E6; text-overflow: ellipsis;text-align:center; font-family:'微软雅黑';
+color: #ADD8E6; text-overflow: ellipsis;text-align:left; font-family:'微软雅黑';
 } 
 :-moz-placeholder { 
-color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:left;
 } 
 ::-moz-placeholder { 
-color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:left;
 } /* for the future */ 
 :-ms-input-placeholder { 
-color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:center;
+color: #ADD8E6 !important; text-overflow: ellipsis; font-family:'微软雅黑';text-align:left;
 } 
 
 .banner{

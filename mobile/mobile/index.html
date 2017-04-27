@@ -495,10 +495,13 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
             {
                 $('#p5p1').addClass('val_yellow');
                 $('#p5p2').removeClass('val_yellow');
+				$('#p5p30').removeClass('val_yellow');
                 $('#p5hr1').addClass('val_yellow2');
                 $('#p5hr1').removeClass('val_yellow1');
                 $('#p5hr2').removeClass('val_yellow2');
                 $('#p5hr2').addClass('val_yellow1');
+				$('#p5hr3').removeClass('val_yellow2');
+                $('#p5hr3').addClass('val_yellow1');
                 $('#p5-part22').removeClass('mydiv3');
                 $('#p5-part3').removeClass('mydiv3');
                 $('#p5-part4').removeClass('mydiv3');
@@ -508,15 +511,46 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
                 $('#p5p3').removeClass('mydiv3');
                 $('#p5p4').removeClass('mydiv3');
                 $('#p5p5').removeClass('mydiv3');
-                $('#p5p9').removeClass('mydiv3');
+                 $('#p5p9').removeClass('mydiv3');
+				$('#p5p10').addClass('mydiv3');
+				$('#p5p11').addClass('mydiv3');
+				$('#p5p31').addClass('mydiv3');
             }
             function tianjin()
             {
                 $('#p5p1').removeClass('val_yellow');
+				$('#p5p30').removeClass('val_yellow');
                 $('#p5p2').addClass('val_yellow');
                 $('#p5hr2').addClass('val_yellow2');
                 $('#p5hr2').removeClass('val_yellow1');
                 $('#p5hr1').removeClass('val_yellow2');
+                $('#p5hr1').addClass('val_yellow1');
+				$('#p5hr3').removeClass('val_yellow2');
+                $('#p5hr3').addClass('val_yellow1');
+                $('#p5-part22').addClass('mydiv3');
+                $('#p5-part3').addClass('mydiv3');
+                $('#p5-part4').addClass('mydiv3');
+                $('#p5p3').addClass('mydiv3');
+                $('#p5p4').addClass('mydiv3');
+                $('#p5p5').addClass('mydiv3');
+                $('#p5p9').addClass('mydiv3');
+				$('#p5p31').addClass('mydiv3');
+				$('#p5p10').addClass('mydiv3');
+				$('#p5p11').addClass('mydiv3');
+                $('#p5p6').removeClass('mydiv3');
+                $('#p5p7').removeClass('mydiv3');
+                $('#p5p8').removeClass('mydiv3');
+            }
+			function chengdu()
+            {
+                $('#p5p1').removeClass('val_yellow');
+                $('#p5p30').addClass('val_yellow');
+				$('#p5p2').removeClass('val_yellow');
+                $('#p5hr3').addClass('val_yellow2');
+                $('#p5hr3').removeClass('val_yellow1');
+                $('#p5hr2').removeClass('val_yellow2');
+                $('#p5hr2').addClass('val_yellow1');
+				$('#p5hr1').removeClass('val_yellow2');
                 $('#p5hr1').addClass('val_yellow1');
                 $('#p5-part22').addClass('mydiv3');
                 $('#p5-part3').addClass('mydiv3');
@@ -525,9 +559,12 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
                 $('#p5p4').addClass('mydiv3');
                 $('#p5p5').addClass('mydiv3');
                 $('#p5p9').addClass('mydiv3');
-                $('#p5p6').removeClass('mydiv3');
-                $('#p5p7').removeClass('mydiv3');
-                $('#p5p8').removeClass('mydiv3');
+                $('#p5p6').addClass('mydiv3');
+                $('#p5p7').addClass('mydiv3');
+                $('#p5p8').addClass('mydiv3');
+				$('#p5p10').removeClass('mydiv3');
+                $('#p5p11').removeClass('mydiv3');
+				$('#p5p31').removeClass('mydiv3');
             }
         </script>
 		<div id = "part5" style="padding:30px 0px 30px 7%;width:100%;height:930px;">
@@ -540,6 +577,10 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 					<p id ="p5p2" style = "font-family:'微软雅黑';font-size:300%;">天津
 					<hr id ="p5hr2" style="width:70%; margin-left:0px;border: 0;color:#D0D0D0; height: 3px" class  ="val_yellow1">
 				</div>
+				<div class = "col-xs-2 col-md-2" onclick="chengdu()">
+					<p id ="p5p30" style = "font-family:'微软雅黑';font-size:300%;">成都
+					<hr id ="p5hr3" style="width:70%; margin-left:0px;border: 0;color:#D0D0D0; height: 3px" class  ="val_yellow1">
+				</div>
 			</div>
 			
 			<div id = "p5-part2" class="row">
@@ -548,12 +589,15 @@ border-width:1px;border-color:#D0D0D0;-moz-border-radius: 7px; -webkit-border-ra
 					<p id="p5p4" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">海淀区五道口华清商务会馆
 					<p id="p5p9" style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">601室
 					<p id="p5p5" style="font-size:200%;">Tel: 010-59436010
-                    <p id="p5p6" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">恒隆店</p>
+                    <p id="p5p6" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">滨江道店</p>
 					<p id="p5p7" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;"> 天津市和平区滨江道恒隆广场5039商铺
 					<p id="p5p8" class="mydiv3"  style="font-size:200%;">Tel：022-27300585
+					<p id="p5p31" class="mydiv3" style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">春熙路店</p>
+					<p id="p5p10" class="mydiv3"  style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;"> 成都市青羊区恒大广场3层3028
+					<p id="p5p11" class="mydiv3"  style="font-size:200%;">Tel：028-62672700
 				</div>
 				<div class = "col-xs-6 col-md-6" id = "p5-part22">
-					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">华宇店</p>
+					<p style="margin-bottom:20px;font-family:'微软雅黑';font-size:200%;">中关村店</p>
 					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">中关村南大街2号B座商业
 					<p style="margin-bottom:10px;font-family:'微软雅黑';font-size:200%;">底下B1-Z05
 					<p style="font-size:200%;">Tel: 010-59436657
